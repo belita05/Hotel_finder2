@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, TextInput, Image, TouchableOpacity,ScrollView,Dimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Avatar } from 'react-native-elements/dist/avatar/Avatar';
+
 
 
 
@@ -14,19 +14,19 @@ const Home = ({ navigation }) => {
             id:1,
             name: 'Mumbai Hotel',
             location: 'Polokwane',
-            img:require('../assets/Images/lodge1.png')
+            img:require('../assets/images/lodge1.png')
         },
         {
             id:2,
-            name: 'Montane Hotel',
-            location: 'Los',
-            img:require('../assets/Images/.png'),
+            name: 'Montana Hotel',
+            location: 'Polokwane',
+            img:require('../assets/images/lodge2.png'),
         },
         {
             id:3,
             name: 'West Hotel',
-            location: 'Los',
-            img:require('../assets/Images/photo1.jpg'),
+            location: 'Polokwane',
+            img:require('../assets/images/lodge1.png'),
         },
       
        
@@ -36,111 +36,39 @@ const Home = ({ navigation }) => {
     return (
         <>
             <SafeAreaView style={styles.container}>
-                <StatusBar
+                {/* <StatusBar
                     backgroundColor="#00BFFF"
                     barStyle="light-content"
                 />
-                <View style={{ backgroundColor: '#00BFFF', height: 60, width: '100%', borderBottomLeftRadius: 20, borderBottomRightRadius: 20, flexDirection: 'row', justifyContent: 'space-between', marginTop: 20 }}>
-                    <Text style={{ color: '#fff', marginTop: 20, marginLeft: 10 }}>
-                        WELLCOME  {'\n'}
-                        LOVERS MALULEKE
-                    </Text>
+                 */}
                     <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
-                        <Icon name='notifications-sharp' size={22} color='#FFF' style={{ marginTop: 20, marginRight: 10 }}></Icon>
+                        <Icon name='notifications-sharp' size={22} color='#000000' style={{ marginTop: 40, paddingLeft: 350 }}></Icon>
                     </TouchableOpacity>
-                </View>
+        
                 <View >
-                    <Text style={{ color: '#00BFFF', margin: 10, fontWeight: 'bold', fontSize: 25 }}>
-                        Find your hotel
+                    <Text style={{ color: '#000000', margin: 10, marginBottom: 40, fontWeight: 'normal', fontSize: 25 }}>
+                        FIND YOUR STAY
                     </Text>
                     <View style={{ flexDirection: 'row', width: '100%' }}>
-                        <Icon name='location-outline' size={22} color='#00BFFF' style={{ marginTop: 20, marginLeft: 10 }}></Icon>
-                        <View style={{ backgroundColor: '#D5DBE3', height: 40, width: '88%', margin: 10, borderRadius: 10, flexDirection: 'row' }}>
-                            <TextInput style={{ padding: 5, width: '88%', margin: 5, }} placeholder="Seacher Location" />
+                        <TouchableOpacity onPress={() => navigation.navigate('Map')}title='Location'>
+                        <Icon name='location-outline' size={22} color='#000000' style={{ marginTop: 20, marginLeft: 10 }}></Icon>
+                        </TouchableOpacity>
+                        <View style={{ backgroundColor: '#FAF1A4', height: 40, width: '78%', margin: 10, borderRadius: 10, flexDirection: 'row' }}>
+                            <TextInput style={{ padding: 5, width: '88%', margin: 5 }} placeholder="Seacher Location" />
                             <TouchableOpacity>
-                                <Icon name='md-search-sharp' style={{ marginTop: 10 }} size={22} color='#00BFFF' ></Icon>
+                                <Icon name='md-search-sharp' style={{ marginTop: 10 }} size={22} color='#000000' ></Icon>
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <ScrollView 
-                    scrollEventThrottle={15}
-                    >
-                        <View>
-                        <Text style={{ color: '#00BFFF', margin: 10, fontWeight: 'bold', fontSize: 25 }}>
-                        Popular hotels
-                    </Text>
-                        </View>
-                        <View style={{height:130,margin:10}}>
-                   <ScrollView
-                   horizontal={true}
-                   showsHorizontalScrollIndicator={false}
-                   >
+                    <ScrollView scrollEventThrottle={15}>
+                       
 
-                       <View  style={{height:130,width:130,margin:5}}>
-                           {/* {
-                                lists.map(element  =>
-                                    
-                                    <Text>
-                                    {element.name}
-                                    </Text>
-                                    )
-                           } */}
-                          <View style={{flex:2}}>
-                                <Image  source={require('../Img/photo1.jpg')} style={{flex:1,height:null,width:null,resizeMode:'cover'}}></Image>  
-                               
-                          </View>
-                          <View style={{flex:1}}>
-                                <Text style={{color:'#00BFFF',fontWeight:'bold'}}>
-                                    Mothebeka Village
-                                </Text>
-
-                          </View>
-                       </View>
-                       <View  style={{height:130,width:130,margin:5,borderWidth:0.5,borderColor:'#dddddd'}}>
-                          <View style={{flex:2}}>
-                                <Image  source={require('../Img/photo2.jpg')} style={{flex:1,height:null,width:null,resizeMode:'cover'}}></Image>  
-                               
-                          </View>
-                          <View style={{flex:1}}>
-                                <Text style={{color:'#00BFFF',fontWeight:'bold'}}>
-                                    Tshabela Village
-                                </Text>
-
-                          </View>
-                       </View>
-                       <View  style={{height:130,width:130,margin:5,borderWidth:0.5,borderColor:'#dddddd'}}>
-                          <View style={{flex:2}}>
-                                <Image  source={require('../Img/photo.png')} style={{flex:1,height:null,width:null,resizeMode:'cover'}}></Image>  
-                               
-                          </View>
-                          <View style={{flex:1}}>
-                                <Text style={{color:'#00BFFF',fontWeight:'bold'}}>
-                                    Mothebeka Village
-                                </Text>
-
-                          </View>
-                       </View>
-                       <View  style={{height:130,width:130,margin:5,borderWidth:0.5,borderColor:'#dddddd'}}>
-                          <View style={{flex:2}}>
-                                <Image  source={require('../Img/photo.png')} style={{flex:1,height:null,width:null,resizeMode:'cover'}}></Image>  
-                               
-                          </View>
-                          <View style={{flex:1}}>
-                                <Text style={{color:'#00BFFF',fontWeight:'bold'}}>
-                                    Mothebeka Village
-                                </Text>
-
-                          </View>
-                          
-
-                       </View>
+                       
                    </ScrollView>
 
-                        </View>
+                        
                         <View>
-<Text style={{ color: '#00BFFF', marginLeft: 10,  fontSize: 20 }}>
-    Network Hotels around you
-</Text>
+
 
 </View>
 <View style={{width:"95%",height:4000,margin: 10}}>
@@ -151,26 +79,19 @@ const Home = ({ navigation }) => {
  
 <Image source={action.img}  style={{flex:1,height:null,width:null,resizeMode:'cover',borderRadius:5}}></Image>  
   
-   <Text style={{fontWeight:'bold'}}>
+   <Text style={{fontWeight:'normal'}}>
        {action.location}
        </Text> 
-       <Text style={{fontWeight:'bold',fontSize:20}}>
+       <Text style={{fontWeight:'normal',fontSize:20, paddingBottom: 1}}>
        {action.name}
        </Text> 
-       {/* {   
-       lists.map(action => <Image source={action.img} style={{width:100,height:100,marginTop:25}}>
-           
-       </Image>
-       )
-    } */}
-            
-            </View>
+      </View>
             </TouchableOpacity>
 ))
 }
 
 </View>
-                    </ScrollView>
+                
                 
                 </View>
 
@@ -187,9 +108,6 @@ const styles = StyleSheet.create({
     },
     onborder:{
         flexDirection:'row',
-        // margin:1,
-        
-     
     },
     com :{
         flexDirection:'row',
@@ -197,10 +115,8 @@ const styles = StyleSheet.create({
         justifyContent:'space-between'
     },
     header:{
-        fontSize:15,
-       fontWeight:'bold' ,
-      
-    //    padding:5,
+        fontSize: 10,
+       fontWeight:'bold',
     }
 });
 export default Home;

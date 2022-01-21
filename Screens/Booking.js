@@ -1,43 +1,39 @@
 import React,{useState} from 'react';
-import { ListItem } from 'react-native-elements';
-import { View, Text, StyleSheet, SafeAreaView, TextInput, Image, TouchableOpacity,ScrollView } from 'react-native';
+//import { ListItem } from 'react-native-elements';
+import {useNavigation} from '@react-navigation/native'
+import { View, Text, StyleSheet, SafeAreaView, TextInput,Button, Image, TouchableOpacity,ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
-const Booking = ({ navigation }) => {
+const Booking = () => {
+const navigation = useNavigation();
 
 
     
     return (
         <>
             <SafeAreaView style={styles.container}>
+
+                <Text style={{marginTop: 15, fontWeight: 'bold'}}>Mumbai Lodge</Text>
                
-             <Image source={require("../assets/images/lodge1.png")} style={{width:'90%',borderBottomLeftRadius:10,borderBottomRightRadius:10,height:'20%',marginTop:25}}></Image>
+             <Image source={require("../assets/images/lodge1.png")} style={{width:'90%',borderRadius: 5,height:'40%',marginTop:30, marginBottom: 30}}></Image>
               <View style={styles.inputBox} >
-              <Icon name='calendar' size={20} color='#00BFFF' style={{ margin: 5 }}></Icon>
+              <Icon name='calendar' size={20} color='#000000' style={{ margin: 5 }}></Icon>
               
-               <Text style={{marginTop:5}}> Sat 5 Jan - Mon 7 Jan </Text>
+               <Text style={{marginTop:5, color: '#000000'}}> Sat 5 Jan - Mon 7 Jan </Text>
                </View>
                <View style={styles.inputBox} >
-              <Icon name='user' size={20} color='#00BFFF' style={{ margin: 5 }}></Icon>
+              <Icon name='user' size={20} color='#000000' style={{ margin: 5 }}></Icon>
                
-               <Text style={{marginTop:5}}> 1 room/s - 2 adults - 0 childern </Text>
+               <Text style={{marginTop:5, color: '#000000'}}> 1 room/s - 2 adults - 0 childern </Text>
                </View>
-                    <TouchableOpacity style={styles.button}>
-                        <Text >
-                            Check Availability
-                        </Text>
-                    </TouchableOpacity>
-
-                <View style={styles.inside}>
-                    <Text  style={{ margin: 5,color: "#00BFFF", fontWeight: 'bold' }} >
-                        AVALIABLE ROOOMS
-                    </Text>
-                </View>
+               <View style={{flex:1,marginBottom:250,justifyContent: 'flex-end',width:360,height:70 }}>
+       <Button onPress={()=> navigation.navigate("Home")} title='Check Availability' color={'#E3AC1E'} ></Button>
+</View>
                
                 <ScrollView style={{width:'100%'}}
                  horizontal={true}>
-               {
+                {/* {
                             room.map((data) => (
 
                                 <ListItem  key={data.id} style={{borderBottomColor:'#000',borderBottomWidth:0.4}}>
@@ -49,7 +45,7 @@ const Booking = ({ navigation }) => {
                             )
 
                             )
-}
+}  */}
                         
 
                 </ScrollView>
@@ -70,11 +66,11 @@ const styles = StyleSheet.create({
         color: '#00BFFF',
         fontWeight: 'bold',
     },
-    buttonTitle: {
-        color: "#FFF",
-        fontWeight: 'bold',
+    // buttonTitle: {
+    //     color: "#E3AC1E",
+    //     fontWeight: 'bold',
 
-    },
+    // },
     inside: {
         width: '100%',
         borderBottomWidth: 1,
@@ -82,22 +78,24 @@ const styles = StyleSheet.create({
     },
     inputBox: {
         flexDirection: 'row',
-        backgroundColor: '#D5DBE3',
-        elevation: 3,
-        width: '90%',
-        margin: 5,
-        borderRadius:10, 
-    },
-    button: {
+        backgroundColor: '#FAF1A4',
+        //color: '#FAF1A4',
         elevation: 3,
         width: '80%',
-        backgroundColor: "#00BFFF",
-        color: "#fff",
-        height: 35,
-        borderRadius: 10,
+        height: 40,
         margin: 5,
-        justifyContent: 'center',
-        alignItems: 'center'
+        borderRadius:5, 
     },
+    // button: {
+    //     elevation: 3,
+    //     width: '80%',
+    //     backgroundColor: "#E3AC1E",
+    //     color: '#fff',
+    //     height: 35,
+    //     borderRadius: 5,
+    //     margin: 15,
+    //     justifyContent: 'center',
+    //     alignItems: 'center'
+    // },
 });
 export default Booking;

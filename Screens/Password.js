@@ -22,7 +22,7 @@ const Password = () => {
          <Image style={{marginTop: 10}}  source={sub}></Image>
     </View>
 
-    { <Text style= {{color: '#fff', fontWeight:'bold', marginTop: 100, paddingTop: 10} }>FORGOTTEN YOUR PASSWORD?</Text> }
+    { <Text style= {{color: '#fff', fontWeight:'bold', marginTop: 100, paddingTop: 10, marginBottom: 70} }>FORGOTTEN YOUR PASSWORD?</Text> }
     <View style={{marginBottom: 300,justifyContent: 'flex-end',alignContent:'center',width:300,height:50 }}>
        <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5, marginTop:20}}>
        <Text style={{color:'#fff'}}>Enter Your Email Address </Text>
@@ -31,8 +31,9 @@ const Password = () => {
      
        </View>
        
-       <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:10}}>
-       <Button onPress={() => navigation.navigate("Login")} title='Submit' color={"#E37D1E"} ></Button>
+       <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
+       <Button onPress={()=> navigation.navigate("Login")} title='Submit' color={'#E3AC1E'} ></Button>
+    
        </View>
        
        
