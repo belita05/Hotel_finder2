@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native'
 import { Image, ImageBackground,StyleSheet, Button,Text,TouchableOpacity, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+// import { SafeAreaView } from 'react-native-safe-area-context';
 import { TextInput } from 'react-native-gesture-handler';
 
 const staticImage = require("./../assets/images/Picture1.jpg");
