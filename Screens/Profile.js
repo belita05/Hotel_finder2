@@ -1,69 +1,69 @@
-import React from "react";
-import { FlatList, Image, SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import Icon from 'react-native-vector-icons/FontAwesome';
+// import React from "react";
+// import { FlatList, Image, SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
+// import { TouchableOpacity } from "react-native-gesture-handler";
+// import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 
-const Profile = ({navigation}) => {
+// const Profile = ({navigation}) => {
 
-    return (
-        <>
-            <SafeAreaView style={style.cover}>
+//     return (
+//         <>
+//             <SafeAreaView style={style.cover}>
 
-                <View style={style.backBox}>
+//                 <View style={style.backBox}>
 
-                <Text style={style.heading}>
-                        My Profile
+//                 <Text style={style.heading}>
+//                         My Profile
 
-                    </Text>
+//                     </Text>
 
                     
-                    <View >
+//                     <View >
                         
-                       <View style={style.profile}>
+//                        <View style={style.profile}>
                                
-                                    <Image style={style.profile} source={require("./../assets/images/profile.png")} />
+//                                     <Image style={style.profile} source={require("./../assets/images/profile.png")} />
 
-                                    <Text style= {style.infor}>
+//                                     <Text style= {style.infor}>
                                         
-                                    </Text>
-                            </View>
-                            </View>
-                            </View>
+//                                     </Text>
+//                             </View>
+//                             </View>
+//                             </View>
                             
-            </SafeAreaView>
+//             </SafeAreaView>
 
-        </>
-    )
-}
+//         </>
+//     )
+// }
 
-const style = StyleSheet.create({
+// const style = StyleSheet.create({
 
-    heading: {
+//     heading: {
       
-        fontWeight: 'bold',
-        fontSize: 25,
-        marginLeft: 35,
-        //fontFamily: 'ruthie',
-        },
+//         fontWeight: 'bold',
+//         fontSize: 25,
+//         marginLeft: 35,
+//         //fontFamily: 'ruthie',
+//         },
    
-    profile: {
+//     profile: {
 
    
-        height: "40%",
-        paddingTop: 30,
-        marginBottom: 50,
-        backgroundColor: "white",
+//         height: "40%",
+//         paddingTop: 30,
+//         marginBottom: 50,
+//         backgroundColor: "white",
         
-    },
+//     },
 
-    HotelPic: {
-        height: "90%",
-        marginLeft: "8%",
-       width: "85%",
-        borderRadius: 20,
-    }
+//     HotelPic: {
+//         height: "90%",
+//         marginLeft: "8%",
+//        width: "85%",
+//         borderRadius: 20,
+//     }
    
-})
-export default Profile
+// })
+// export default Profile

@@ -31,7 +31,7 @@ const Login = () => {
                     <TextInput style={styles.Input}> </TextInput>
                     
                     <View style={{ marginBottom: 10, marginTop: 20}}>
-                        <Button onPress={() => navigation.navigate("Home")} title='Login' color={'#E3AC1E'} ></Button>
+                        <Button onPress={() => navigation.navigate("TabScreen")} title='Login' color={'#E3AC1E'} ></Button>
                     </View>
 
                     <Button onPress={() => navigation.navigate("Register")} title='Register' color={"#E37D1E"} ></Button>

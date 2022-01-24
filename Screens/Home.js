@@ -1,6 +1,7 @@
 import React from 'react';
-import { Dimensions, FlatList, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image, Animated,} from 'react-native';
+import { Dimensions, FlatList, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image, Animated, ColorPropType,} from 'react-native';
 import { Icon } from 'react-native-elements';
+// import Icon from 'react-native-vector-icons/Ionicons';
 import {COLORS} from './colors';
 import { hotels } from './Hotels';
 // import Hotels from 'Hotels';
@@ -27,23 +28,23 @@ const Home = ({navigation}) => {
               <Text
                 style={{
                   ...style.categoryListText,
-                  color:
-                    selectedCategoryIndex == index
-                      ? COLORS.primary
-                      : COLORS.grey,
+                  color:  COLORS.grey
+                    // selectedCategoryIndex == index
+                    //   ? COLORS.primary
+                    //   : COLORS.grey,
                 }}>
                 {item}
               </Text>
-              {selectedCategoryIndex == index && (
+              {/* {selectedCategoryIndex == index && (
                 <View
                   style={{
                     height: 3,
                     width: 30,
-                    backgroundColor: COLORS.primary,
+                    backgroundColor: '#E3AC1E',
                     marginTop: 2,
                   }}
                 />
-              )}
+              )} */}
             </View>
           </TouchableOpacity>
         ))}
@@ -71,12 +72,12 @@ const Home = ({navigation}) => {
         onPress={() => navigation.navigate('DetailsScreen', hotel)}>
         <Animated.View style={{...style.card, transform: [{scale}]}}>
           <Animated.View style={{...style.cardOverLay, opacity}} />
-          <View style={style.priceTag}>
+          {/* <View style={style.priceTag}>
             <Text
               style={{color: COLORS.white, fontSize: 20, fontWeight: 'bold'}}>
-              ${hotel.price}
+              R{hotel.price}
             </Text>
-          </View>
+          </View> */}
           <Image source={hotel.image} style={style.cardImage} />
           <View style={style.cardDetails}>
             <View
@@ -89,7 +90,7 @@ const Home = ({navigation}) => {
                   {hotel.location}
                 </Text>
               </View>
-              <Icon name="bookmark-border" size={26} color={COLORS.primary} />
+              <Icon name="bookmark-border" size={26} color='#E3AC1E' />
             </View>
             <View
               style={{
@@ -104,7 +105,7 @@ const Home = ({navigation}) => {
                 <Icon name="star" size={15} color={COLORS.orange} />
                 <Icon name="star" size={15} color={COLORS.grey} />
               </View>
-              <Text style={{fontSize: 10, color: COLORS.grey}}>365reviews</Text>
+              <Text style={{fontSize: 10, color: COLORS.grey}}>365 reviews</Text>
             </View>
           </View>
         </Animated.View>
@@ -148,19 +149,23 @@ const Home = ({navigation}) => {
           <View style={{flexDirection: 'row'}}>
             <Text style={{fontSize: 30, fontWeight: 'bold'}}>in </Text>
             <Text
-              style={{fontSize: 30, fontWeight: 'bold', color: COLORS.primary}}>
+              style={{fontSize: 30, fontWeight: 'bold', color: '#E3AC1E'}}>
               SA
             </Text>
           </View>
         </View>
-        <Icon name="person-outline" size={38} color={COLORS.grey} />
+        <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
+                        <Icon name='notifications' size={22} color='#000000' style={{ marginTop: 20, marginRight: 10 }}></Icon>
+                    </TouchableOpacity>
+        {/* <Icon name="notifications" size={38} color= {COLORS.grey} /> */}
       </View>
+     
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={style.searchInputContainer}>
-          <Icon name="search" size={30} style={{marginLeft: 20}} />
+          <Icon name="search" size={25} style={{marginLeft: 5}} />
           <TextInput
             placeholder="Search"
-            style={{fontSize: 20, paddingLeft: 10}}
+            style={{fontSize: 20, paddingLeft: 10, width: 300}}
           />
         </View>
         <CategoryList />
@@ -196,7 +201,7 @@ const Home = ({navigation}) => {
           <Text style={{fontWeight: 'bold', color: COLORS.grey}}>
             Top hotels
           </Text>
-          <Text style={{color: COLORS.grey}}>Show all</Text>
+         
         </View>
         <FlatList
           data={hotels}
@@ -258,7 +263,7 @@ const style = StyleSheet.create({
   priceTag: {
     height: 60,
     width: 80,
-    backgroundColor: COLORS.primary,
+    backgroundColor: '#E3AC1E',
     position: 'absolute',
     zIndex: 1,
     right: 0,

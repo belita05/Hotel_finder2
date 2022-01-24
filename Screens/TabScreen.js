@@ -20,32 +20,32 @@ const TabScreen = () => {
             <Tab.Navigator>
             <Tab.Screen name ={"Home"} component={Home}      options={{
           tabBarLabel: 'Home',
-          tabBarColor: '#00BFFF',
+          tabBarColor: '#E3AC1E',
           headerShown :false,
           tabBarIcon: ({ color }) => (
-          <Icon name="home" color={color} size={24} />
+          <Icon name="home" color={'E3AC1E'} size={24} />
           ),
         }} ></Tab.Screen>
 <Tab.Screen name ={"History"} component={History}      options={{
           tabBarLabel: 'History',
-          tabBarColor: '#00BFFF',
+          tabBarColor: '#E3AC1E',
           tabBarIcon: ({ color }) => (
-          <Icons name="history" color={color} size={24} />
+          <Icons name="history" color={'E3AC1E'} size={24} />
           ),
         }} ></Tab.Screen>
 
-<Tab.Screen name ={"Favorite"} component={Love}      options={{
+{/* <Tab.Screen name ={"Favorite"} component={Love}      options={{
           tabBarLabel: 'favorite',
           tabBarColor: '#00BFFF',
           tabBarIcon: ({ color }) => (
           <IconM name="favorite" color={color} size={24} />
           ),
-}}> </Tab.Screen>
+}}> </Tab.Screen> */}
         <Tab.Screen name ={"Profile"} component={Profile}      options={{
           tabBarLabel: 'Profile',
-          tabBarColor: '#00BFFF',
+          tabBarColor: '#E3AC1E',
           tabBarIcon: ({ color }) => (
-          <Icon name="person" color={color} size={24} />
+          <Icon name="person" color={'E'} size={24} />
           ),
         }} ></Tab.Screen>
         

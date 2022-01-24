@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
+import { ImageBackground, ScrollView, StatusBar, StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from './colors';
 
@@ -31,17 +31,19 @@ const DetailsScreen = ({navigation, route}) => {
       </ImageBackground>
       <View>
         <View style={style.iconContainer}>
-          <Icon name="place" color={COLORS.white} size={28} />
+          <Icon name="place" color={COLORS.white} size={28} onPress={()=> navigation.navigate("Map")} style={{color:"#000000", marginBottom: 30}}/>
         </View>
-        <View style={{marginTop: 20, paddingHorizontal: 20}}>
+        <View style={{marginTop: 10, paddingHorizontal: 20}}>
           <Text style={{fontSize: 20, fontWeight: 'bold'}}>{item.name}</Text>
           <Text
             style={{
               fontSize: 12,
               fontWeight: '400',
               color: COLORS.grey,
-              marginTop: 5,
+              marginTop: 20,
+              paddingBottom: 5
             }}>
+              <TouchableOpacity title='location'></TouchableOpacity>
             {item.location}
           </Text>
           <View
@@ -62,7 +64,7 @@ const DetailsScreen = ({navigation, route}) => {
                 4.0
               </Text>
             </View>
-            <Text style={{fontSize: 13, color: COLORS.grey}}>365reviews</Text>
+            <Text style={{fontSize: 13, color: COLORS.grey}}>365 reviews</Text>
           </View>
           <View style={{marginTop: 20}}>
             <Text style={{lineHeight: 20, color: COLORS.grey}}>
@@ -89,7 +91,7 @@ const DetailsScreen = ({navigation, route}) => {
                 color: COLORS.grey,
                 marginLeft: 5,
               }}>
-              ${item.price}
+              R70
             </Text>
             <Text
               style={{
@@ -103,9 +105,9 @@ const DetailsScreen = ({navigation, route}) => {
           </View>
         </View>
         <View style={style.btn}>
-          <Text style={{color: COLORS.white, fontSize: 18, fontWeight: 'bold'}}>
-            Book Now
-          </Text>
+        <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
+       <Button onPress={()=> navigation.navigate("Login")} title='Book Now' color={'#E3AC1E'} ></Button>
+       </View>
         </View>
       </View>
     </ScrollView>

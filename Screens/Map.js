@@ -28,12 +28,10 @@ const Map = ({ navigation }) => {
       }
 
   return (
-    <>
        <View style={style.container}>
         
        <MapView style={style.map} />
       </View>
-    </>
   );
 };
 const style = StyleSheet.create({
@@ -41,6 +39,7 @@ const style = StyleSheet.create({
     container: {
         backgroundColor: "#CA730D",
         height: "100%",
+        width: '100%',
     },
     map: {
       width: Dimensions.get('window').width,
