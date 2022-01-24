@@ -9,9 +9,8 @@ import Password from './Screens/Password';
 import Booking from './Screens/Booking';
 import TabScreen from './Screens/TabScreen';
 import DetailsScreen from './Screens/DetailsScreen';
-import Map from './Screens/Map';
-import DetailsScreen from './Screens/DetailsScreen';
-import Hotels from '.Screens/hotels';
+// import Map from './Screens/Map';
+// import Hotels from '.Screens/Hotels';
 
 
 const Stack = createNativeStackNavigator();
@@ -29,7 +28,7 @@ const StackNavigation = () => {
         {/* <Stack.Screen name= "TabScreen" component={TabScreen}/> */}
         {/* <Stack.Screen name= "Map" component= {Map}/> */}
         <Stack.Screen name= "DetailsScreen" component= {DetailsScreen}/>
-        <Stack.Screen name= "hotels" component= {Hotels}/>
+        {/* <Stack.Screen name= "Hotels" component= {Hotels}/> */}
         
       </Stack.Navigator>
     )

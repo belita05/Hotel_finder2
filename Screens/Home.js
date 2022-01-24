@@ -1,14 +1,16 @@
 import React from 'react';
 import { Dimensions, FlatList, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image, Animated,} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import COLORS from 'colors';
-import hotels from 'Hotels';
+import { Icon } from 'react-native-elements';
+import {COLORS} from './colors';
+import { hotels } from './Hotels';
+// import Hotels from 'Hotels';
 
 const {width} = Dimensions.get('screen');
 const cardWidth = width / 1.8;
 
+
 const Home = ({navigation}) => {
-  const categories = ['All', 'Popular', 'Top Rated', 'Featured', 'Luxury'];
+  const categories = ['Hotels'];
   const [selectedCategoryIndex, setSelectedCategoryIndex] = React.useState(0);
   const [activeCardIndex, setActiveCardIndex] = React.useState(0);
   const scrollX = React.useRef(new Animated.Value(0)).current;
@@ -147,7 +149,7 @@ const Home = ({navigation}) => {
             <Text style={{fontSize: 30, fontWeight: 'bold'}}>in </Text>
             <Text
               style={{fontSize: 30, fontWeight: 'bold', color: COLORS.primary}}>
-              Paris
+              SA
             </Text>
           </View>
         </View>

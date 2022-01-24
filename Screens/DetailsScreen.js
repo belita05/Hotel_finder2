@@ -1,6 +1,7 @@
 import React from 'react';
 import { ImageBackground, ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import COLORS from './colors';
 
 const DetailsScreen = ({navigation, route}) => {
   const item = route.params;
