@@ -29,9 +29,9 @@ const StackNavigation = () => {
         <Stack.Screen name= "Map" component= {Map}/>
         <Stack.Screen name= "DetailsScreen" component= {DetailsScreen}/>
         {/* <Stack.Screen name= "Hotels" component= {Hotels}/> */}
-        
+ 
       </Stack.Navigator>
     )
 }
 
-export default StackNavigation
+export default StackNavigation;

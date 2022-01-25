@@ -20,7 +20,7 @@ const TabScreen = () => {
             <Tab.Navigator>
             <Tab.Screen name ={"Home"} component={Home}      options={{
           tabBarLabel: 'Home',
-          tabBarColor: '#E3AC1E',
+          tabBarColor: '#fff',
           headerShown :false,
           tabBarIcon: ({ color }) => (
           <Icon name="home" color={'E3AC1E'} size={24} />
@@ -44,7 +44,7 @@ const TabScreen = () => {
         <Tab.Screen name ={"Profile"} component={Profile}      options={{
           tabBarLabel: 'Profile',
           tabBarColor: '#E3AC1E',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({  }) => (
           <Icon name="person" color={'E'} size={24} />
           ),
         }} ></Tab.Screen>

@@ -46,15 +46,15 @@ const Register = () => {
       <TextInput style={styles.Input}> </TextInput>
 
        
-       <View style={{marginTop:10,marginBottom:20}}>
+       {/* <View style={{marginTop:10,marginBottom:20}}>
        <Button onPress={()=> navigation.navigate("Home")} title='Create Account' color={"#E37D1E"} ></Button>
-       </View>
-       <View style={{marginTop:10,marginBottom:20}}>
+       </View> */}
+       <View style={{marginTop:40,marginBottom:20}}>
        <Button onPress={()=> navigation.navigate("TabScreen")} title='Create Account' color={"#E37D1E"} ></Button>
        </View>
-       <View style={{marginTop:10,marginBottom:20}}>
+       {/* <View style={{marginTop:10,marginBottom:20}}>
        <Button onPress={()=> navigation.navigate("TabScreen")} title='Login' color={"#E37D1E"} ></Button>
-       </View>
+       </View> */}
 
 
 
