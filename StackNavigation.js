@@ -10,6 +10,7 @@ import Booking from './Screens/Booking';
 import TabScreen from './Screens/TabScreen';
 import DetailsScreen from './Screens/DetailsScreen';
 import Map from './Screens/Map';
+import ConfirmPayment from './Screens/ConfirmPayment';
 // import Hotels from '.Screens/Hotels';
 
 
@@ -29,6 +30,7 @@ const StackNavigation = () => {
         <Stack.Screen name= "Map" component= {Map}/>
         <Stack.Screen name= "DetailsScreen" component= {DetailsScreen}/>
         {/* <Stack.Screen name= "Hotels" component= {Hotels}/> */}
+        <Stack.Screen name="ConfirmPayment" component={ConfirmPayment}/>
  
       </Stack.Navigator>
     )

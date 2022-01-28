@@ -1,112 +1,112 @@
-// import React from "react";
-// import { FlatList, Image, SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
-// import { TouchableOpacity } from "react-native-gesture-handler";
-// import Icon from 'react-native-vector-icons/FontAwesome';
+import React from "react";
+import { FlatList, Image, SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 
-// const PropertyVew = ({navigation}) => {
+const PropertyVew = ({navigation}) => {
 
-//     return (
-//         <>
-//             <SafeAreaView style={style.cover}>
+    return (
+        <>
+            <SafeAreaView style={style.cover}>
 
-//                 <View style={style.backBox}>
+                <View style={style.backBox}>
 
-//                 <Text style={style.heading}>
-//                         Mumbai Lodge
+                <Text style={style.heading}>
+                        Mumbai Lodge
 
-//                     </Text>
+                    </Text>
 
-//                     <View style={style.search}>
-//                     <TextInput  placeholder="Search hotel"/>
+                    <View style={style.search}>
+                    <TextInput  placeholder="Search hotel"/>
                    
-//                     </View>
+                    </View>
                     
 
-//                     <View >
+                    <View >
                         
-//                         <View style={style.picContainer}>
+                        <View style={style.picContainer}>
 
-//                             <View style={style.picView}>
-//                                 <TouchableOpacity  onPress={() => navigation.navigate('searchroom', { name: 'searchroom' })}>
-//                                     <Image style={style.lodge1} source={require("./../assets/images/lodge1.png")} />
+                            <View style={style.picView}>
+                                <TouchableOpacity  onPress={() => navigation.navigate('searchroom', { name: 'searchroom' })}>
+                                    <Image style={style.lodge1} source={require("./../assets/images/lodge1.png")} />
 
-//                                 </TouchableOpacity>
-//                             </View>
+                                </TouchableOpacity>
+                            </View>
 
-//                         </View>
+                        </View>
 
-//                     </View>
+                    </View>
 
-//                 </View>
-//             </SafeAreaView>
+                </View>
+            </SafeAreaView>
 
-//         </>
-//     )
-// }
+        </>
+    )
+}
 
-// const style = StyleSheet.create({
-//     cover: {
-//         backgroundColor: "#fff",
-//         height: "100%",
+const style = StyleSheet.create({
+    cover: {
+        backgroundColor: "#fff",
+        height: "100%",
 
-//     },
-//     heading: {
+    },
+    heading: {
       
-//         fontWeight: 'bold',
-//         fontSize: 25,
-//         marginLeft: 35,
-//         //fontFamily: 'ruthie',
+        fontWeight: 'bold',
+        fontSize: 25,
+        marginLeft: 35,
+        //fontFamily: 'ruthie',
         
 
 
-//     },
-//     search: {
-//         backgroundColor: "#d4d3cf",
-//         marginLeft: 30,
-//         borderRadius:50,
-//         paddingLeft:100,
-//         marginTop:30,
-//         justifyContent: 'center',
-//         width:"70%",
-//         height:"5%",
+    },
+    search: {
+        backgroundColor: "#d4d3cf",
+        marginLeft: 30,
+        borderRadius:50,
+        paddingLeft:100,
+        marginTop:30,
+        justifyContent: 'center',
+        width:"70%",
+        height:"5%",
 
-//     },
-//     picContainer: {
+    },
+    picContainer: {
 
        
-//    },
+   },
     
-//     picView: {
+    picView: {
 
    
-//         height: "40%",
-//         paddingTop: 30,
-//         marginBottom: 50,
-//         backgroundColor: "white",
+        height: "40%",
+        paddingTop: 30,
+        marginBottom: 50,
+        backgroundColor: "white",
         
 
 
-//     },
+    },
 
-//     HotelPic: {
-//         height: "90%",
-//         marginLeft: "8%",
-//        width: "85%",
-//         borderRadius: 10,
+    HotelPic: {
+        height: "90%",
+        marginLeft: "8%",
+       width: "85%",
+        borderRadius: 10,
 
 
-//     },
-//     line: {
-//         marginBottom: 0,
-//        marginLeft: "13%",
-//         marginBottom: 30,
-//         marginTop: 10,
-//         color:"#d1d0cd",
+    },
+    line: {
+        marginBottom: 0,
+       marginLeft: "13%",
+        marginBottom: 30,
+        marginTop: 10,
+        color:"#d1d0cd",
 
-//     },
+    },
    
     
-// })
-// export default PropertyVew
+})
+export default PropertyVew

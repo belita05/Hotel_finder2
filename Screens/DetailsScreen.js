@@ -106,7 +106,7 @@ const DetailsScreen = ({navigation, route}) => {
         </View>
         <View style={style.btn}>
         <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
-       <Button onPress={()=> navigation.navigate("Login")} title='Book Now' color={'#E3AC1E'} ></Button>
+       <Button onPress={()=> navigation.navigate("ConfirmPayment")} title='Book Now' color={'#E3AC1E'} ></Button>
        </View>
         </View>
       </View>
