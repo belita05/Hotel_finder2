@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import {useNavigation} from '@react-navigation/native'
 import { Image, ImageBackground,StyleSheet, Button,Text,TouchableOpacity, View,TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {firebase} from './Firebase/firebase';
+import { auth } from './Firebase/firebase';
+import firebase from 'firebase';
 
 const staticImage = require("./../assets/images/Picture1.jpg");
 const staticLogo = require("./../assets/images/test.png");
@@ -11,7 +12,39 @@ const sub = require("./../assets/images/sub.png");
 
 const Register = () => {
     const navigation = useNavigation();
-    console.log(firebase);
+    const [FullName, setFullName] = useState("");
+    const [RegisterEmail, setRegisterEmail] = useState("")
+    const [registerPassword, setRegisterPassword] = useState("")
+    const [user, setUser] = useState({});
+    const onAuthStateChanged = (auth, (currentUser) => {
+        setUser(currentUser);
+    });
+    const register = async () =>{
+
+    try{
+        await firebase.auth().createUserWithEmailAndPassword(registerEmail, registerPassword).then((result)=> {
+            console.log(result.user)
+
+        });
+
+    const currentUser=firebase.auth().currentUser;
+    const db= firebase.firestore();
+    db.collection("user")
+    .doc(currentUser.uid)
+    .set({
+        email:currentUser.registerEmail,
+        password:currentUser.setRegisterPassword,
+        fullnames: FullName
+    });
+
+}
+catch (error){
+    console.log(error.message);
+}
+
+    };
+
+   
     return (
         <View style = {styles.container}>
         <ImageBackground source={staticImage} style={styles.ImageBackground}>
