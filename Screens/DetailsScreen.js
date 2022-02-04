@@ -92,11 +92,7 @@ const DetailsScreen = ({navigation, route}) => {
                 color: COLORS.grey,
                 marginLeft: 5,
               }}>
-<<<<<<< HEAD
-              R850
-=======
-              R700
->>>>>>> 23a6e927189ab9b54ecf4242c9eba44a1d4d0cee
+
             </Text>
             <Text
               style={{
