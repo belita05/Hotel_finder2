@@ -35,7 +35,7 @@ const Home = ({navigation}) => {
                 }}>
                 {item}
               </Text>
-              {/* {selectedCategoryIndex == index && (
+              {/* {selectedCategoryIndex == index && (  
                 <View
                   style={{
                     height: 3,

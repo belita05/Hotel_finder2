@@ -21,7 +21,7 @@ const DetailsScreen = ({navigation, route}) => {
       <ImageBackground style={style.headerImage} source={item.image}>
 
 
-        {/* <View style={style.header}>
+        <View style={style.header}>
           <Icon
             name="arrow-back-ios"
             size={28}
@@ -29,6 +29,7 @@ const DetailsScreen = ({navigation, route}) => {
             onPress={navigation.goBack}
           />
           <Icon name="bookmark-border" size={28} color={COLORS.white} />
+          </View>
       </ImageBackground>
       <View>
         <View style={style.iconContainer}>
