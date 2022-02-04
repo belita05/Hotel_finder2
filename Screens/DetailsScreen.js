@@ -19,7 +19,8 @@ const DetailsScreen = ({navigation, route}) => {
         backgroundColor="rgba(0,0,0,0)"
       />
       <ImageBackground style={style.headerImage} source={item.image}>
-<<<<<<< HEAD
+
+
         {/* <View style={style.header}>
           <Icon
             name="arrow-back-ios"
@@ -28,10 +29,6 @@ const DetailsScreen = ({navigation, route}) => {
             onPress={navigation.goBack}
           />
           <Icon name="bookmark-border" size={28} color={COLORS.white} />
-        </View> */}
-=======
-       
->>>>>>> 23a6e927189ab9b54ecf4242c9eba44a1d4d0cee
       </ImageBackground>
       <View>
         <View style={style.iconContainer}>
