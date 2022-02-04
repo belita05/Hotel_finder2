@@ -9,7 +9,7 @@ export const hotels = [
     },
     {
       id: '2',
-      name: 'Bring Hotel',
+      name: 'West Hotel',
       location: 'Biccard street',
       price: 70,
       image: require('../assets/images/lodge2.png'),

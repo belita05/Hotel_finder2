@@ -14,7 +14,7 @@ const ConfirmPayment = ({navigation}) => {
                 {/* <View style={style.backBox}> */}
 
                 <Text style={style.heading}>
-                        Mumbai Lodge
+                        Mumbai Hotel
 
                     </Text>
 
@@ -30,14 +30,7 @@ const ConfirmPayment = ({navigation}) => {
                                 {/* <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:200,height:50 }}>
        <Button onPress={()=> navigation.navigate("Login")} title='Get Started' color={'#E3AC1E'} ></Button> */}
                             
-                            <Text>
-              Please Confirm Your Information
-          </Text>
-          
-        
-        <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
-       <Button onPress={()=> navigation.navigate("ConfirmPayment")} title='Book Now' color={'#E3AC1E'} ></Button>
-       </View>
+                
        </View>
           
          
@@ -45,6 +38,14 @@ const ConfirmPayment = ({navigation}) => {
 
                     </View>
                     </View>
+                    <Text>
+              Please Confirm Payment
+             </Text>
+          
+        
+        <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
+       <Button onPress={()=> navigation.navigate("ConfirmPayment")} title='Book Now' color={'#E3AC1E'} ></Button>
+       </View>
                 
                 {/* </View> */}
             
@@ -118,4 +119,4 @@ const style = StyleSheet.create({
    
     
 })
-export default ConfirmPayment
+export default ConfirmPayment;
