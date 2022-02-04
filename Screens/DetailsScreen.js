@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, ScrollView, StatusBar, StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
+import {ImageBackground, ScrollView, StatusBar, StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from './colors';
 
@@ -19,6 +19,7 @@ const DetailsScreen = ({navigation, route}) => {
         backgroundColor="rgba(0,0,0,0)"
       />
       <ImageBackground style={style.headerImage} source={item.image}>
+<<<<<<< HEAD
         {/* <View style={style.header}>
           <Icon
             name="arrow-back-ios"
@@ -28,6 +29,9 @@ const DetailsScreen = ({navigation, route}) => {
           />
           <Icon name="bookmark-border" size={28} color={COLORS.white} />
         </View> */}
+=======
+       
+>>>>>>> 23a6e927189ab9b54ecf4242c9eba44a1d4d0cee
       </ImageBackground>
       <View>
         <View style={style.iconContainer}>
@@ -91,7 +95,11 @@ const DetailsScreen = ({navigation, route}) => {
                 color: COLORS.grey,
                 marginLeft: 5,
               }}>
+<<<<<<< HEAD
               R850
+=======
+              R700
+>>>>>>> 23a6e927189ab9b54ecf4242c9eba44a1d4d0cee
             </Text>
             <Text
               style={{

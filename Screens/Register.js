@@ -3,6 +3,7 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native'
 import { Image, ImageBackground,StyleSheet, Button,Text,TouchableOpacity, View,TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import {firebase} from '../Firebase/firebase';
 
 const staticImage = require("./../assets/images/Picture1.jpg");
 const staticLogo = require("./../assets/images/test.png");
@@ -10,6 +11,7 @@ const sub = require("./../assets/images/sub.png");
 
 const Register = () => {
     const navigation = useNavigation();
+    console.log(firebase);
     return (
         <View style = {styles.container}>
         <ImageBackground source={staticImage} style={styles.ImageBackground}>

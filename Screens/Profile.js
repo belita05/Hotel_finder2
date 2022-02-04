@@ -1,17 +1,20 @@
 import React from 'react';
-import { View , Text,StyleSheet,SafeAreaView,   TouchableOpacity} from 'react-native';
+import { View , Text,StyleSheet,SafeAreaView,Button,TouchableOpacity} from 'react-native';
 import Icons from 'react-native-vector-icons/Ionicons';
+import {useNavigation} from '@react-navigation/native';
 // import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Avatar } from 'react-native-elements/dist/avatar/Avatar';
 import * as ImagePicker from 'expo-image-picker';
-const Profile  =({navigation}) =>{
+
+const Profile = () => {
+    const navigation = useNavigation();
     return(
         <>
         <SafeAreaView style ={styles.container}>
-            <View style={styles.userInfoSection}>
-            {/* <View style={{ marginTop: 10, marginLeft: 140, borderRadius: 10, height: '40%'}}>
-            <Avatar size={90} source={require('../assets/images/lodge1.png')}></Avatar> */}
+            {/* <View style={styles.userInfoSection}> */}
+            {/* <View style={{ marginTop: 10, marginLeft: 140, borderRadius: 10, height: '40%'}}> */}
+           
           
            
  {/* <View style={{marginLeft: 20}}> */}
@@ -27,11 +30,12 @@ const Profile  =({navigation}) =>{
          Tau
      </Text> */}
 
-     </View>
+     {/* </View> */}
      {/* </View> */}
      {/* </View> */}
 
-     <SafeAreaView style={styles.userInfoSection}>
+     {/* <SafeAreaView style={styles.userInfoSection}> */}
+      <Avatar size={90} source={require('../assets/images/profile.png')}></Avatar>
         <View style={styles.row}>
           <Icons name="person" color="#000000" size={20}/>
           <Text style={{color:"#777777", marginLeft: 20, fontSize: 17}}>Bella Tau</Text>
@@ -45,22 +49,24 @@ const Profile  =({navigation}) =>{
           <Icon name="email" color="#000000" size={20}/>
           <Text style={{color:"#777777", marginLeft: 20, fontSize: 17}}>bellam@gmail.com</Text>
         </View>
-      </SafeAreaView>
+      {/* </SafeAreaView> */}
 
+           <View  style={styles.ButtonCover} > 
       
-      
-      <View  style={styles.button} >
-        <TouchableOpacity onPress={ ()=>navigation.navigate('UpdateProfile')}>
-            <Text style={{color:"#fff", }}>
-                Edit Profile 
-            </Text>
-        </TouchableOpacity>
-        </View>
-        <TouchableOpacity style={styles.button} onPress={ ()=>navigation.navigate('SignIn') }   >
-            <Text style={{color:"#fff"}} >
-                Log Out 
-            </Text>
-        </TouchableOpacity>
+       <View  style={styles.button} > 
+    
+    
+        <Button style={styles.button} onPress={ ()=>navigation.navigate('UpdateProfile')}title='Edit Profile' color={'#E3AC1E'} >
+            
+        </Button>
+        </View> 
+             <View  style={styles.button} > 
+        <Button style={styles.button} onPress={ ()=>navigation.navigate('Login')}title='Log Out' color={'#E3AC1E'} >
+           
+        </Button>
+         </View> 
+         </View> 
+         {/* </View> */}
         
         </SafeAreaView>
         
@@ -79,16 +85,22 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:"space-between" ,
         // width: '100%',
+    },ButtonCover : {
+      flex:1,
+
+
+      marginRight:60,
+      marginLeft:60,
+      marginTop:400,
+      // marginBottom:20,
+   justifyContent: 'center'
     },
     button: {
-        backgroundColor: "#E37D1E",
-        borderRadius: 8,
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '80%',
-        height: '6%',
-        marginLeft:35,
-        marginTop:18
+     margin:5,
+    //  height: 300,
+     justifyContent: 'center',
+     
+     
     },
     content:
     {
@@ -132,32 +144,32 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         
       },
-      title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-      },
-      caption: {
-        fontSize: 14,
-        lineHeight: 14,
-        fontWeight: '500',
-      },
+      // title: {
+      //   fontSize: 24,
+      //   fontWeight: 'bold',
+      // },
+      // caption: {
+      //   fontSize: 14,
+      //   lineHeight: 14,
+      //   fontWeight: '500',
+      // },
       row: {
         flexDirection: 'row',
         marginBottom: 10,
       },
-      infoBoxWrapper: {
-        borderBottomColor: '#dddddd',
-        borderBottomWidth: 1,
-        borderTopColor: '#dddddd',
-        borderTopWidth: 1,
-        flexDirection: 'row',
-        height: 100,
-      },
-      infoBox: {
-        width: '50%',
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
+      // infoBoxWrapper: {
+      //   borderBottomColor: '#dddddd',
+      //   borderBottomWidth: 1,
+      //   borderTopColor: '#dddddd',
+      //   borderTopWidth: 1,
+      //   flexDirection: 'row',
+      //   height: 100,
+      // },
+      // infoBox: {
+      //   width: '50%',
+      //   alignItems: 'center',
+      //   justifyContent: 'center',
+      // },
       menuWrapper: {
         marginTop: 10,
       },
