@@ -90,7 +90,7 @@ const Home = ({navigation}) => {
                   {hotel.location}
                 </Text>
               </View>
-              <Icon name="bookmark-border" size={26} color='#E3AC1E' />
+            
             </View>
             <View
               style={{

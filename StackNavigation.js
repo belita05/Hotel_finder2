@@ -12,6 +12,9 @@ import DetailsScreen from './Screens/DetailsScreen';
 import Map from './Screens/Map';
 import ConfirmPayment from './Screens/ConfirmPayment';
 // import Hotels from '.Screens/Hotels';
+import Payment from './Screens/Payment';
+import EditProfile from './Screens/EditProfile';
+import UpdateProfile from './Screens/UpdateProfile';
 
 
 const Stack = createNativeStackNavigator();
@@ -31,6 +34,9 @@ const StackNavigation = () => {
         <Stack.Screen name= "DetailsScreen" component= {DetailsScreen}/>
         {/* <Stack.Screen name= "Hotels" component= {Hotels}/> */}
         <Stack.Screen name="ConfirmPayment" component={ConfirmPayment}/>
+        <Stack.Screen name= "Payment" component={Payment}/>
+        <Stack.Screen name= "UpdateProfile" component={UpdateProfile}/>
+
  
       </Stack.Navigator>
     )
