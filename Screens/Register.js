@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {useNavigation} from '@react-navigation/native'
 import { Image, ImageBackground,StyleSheet, Button,Text,TouchableOpacity, View,TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { auth } from './Firebase/firebase';
+import { auth } from '../firebase';
 import firebase from 'firebase';
 
 const staticImage = require("./../assets/images/Picture1.jpg");
