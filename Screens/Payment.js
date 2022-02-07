@@ -1,6 +1,8 @@
 import React from 'react';
 import { SafeAreaView, Text, View, StyleSheet,TextInput,TouchableOpacity  } from 'react-native';
 import { Avatar } from 'react-native-elements';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Feather from 'react-native-vector-icons/Feather';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import Feather from 'react-native-vector-icons/Feather';
 
@@ -13,6 +15,15 @@ const Payment = ({navigation}) => {
                 <View style={{margin:12}}>
                     <View style={{ justifyContent: 'space-between', flexDirection: 'row',marginBottom:30}}>
                         <Avatar
+
+                            source={require('./../assets/images/image 36.png')}
+                        ></Avatar>
+                        <Avatar
+                            source={require('./../assets/images/image 37.png')}
+                        ></Avatar>
+                        <Avatar
+                            source={require('./../assets/images/image 38.png')}
+
                             source={require('../assets/images/image 36.png')}
                         ></Avatar>
                         <Avatar
@@ -20,6 +31,7 @@ const Payment = ({navigation}) => {
                         ></Avatar>
                         <Avatar
                             source={require('../assets/images/image 38.png')}
+
                         ></Avatar>
                     </View>
                     <Text> Card Number</Text>
@@ -85,7 +97,12 @@ const Payment = ({navigation}) => {
             ]}
           />
           </View>
+
+          <TouchableOpacity style={styles.commandButton} onPress={() => navigation.navigate('PaymentSuc')}>
+            </TouchableOpacity>
+
           <TouchableOpacity style={styles.commandButton} onPress={() => navigation.navigate('ConfirmPayment')}>
+
           <Text style={styles.panelButtonTitle}>Submit</Text>
         </TouchableOpacity>
                    

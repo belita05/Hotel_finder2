@@ -19,7 +19,17 @@ const DetailsScreen = ({navigation, route}) => {
         backgroundColor="rgba(0,0,0,0)"
       />
       <ImageBackground style={style.headerImage} source={item.image}>
-       
+
+
+        <View style={style.header}>
+          <Icon
+            name="arrow-back-ios"
+            size={28}
+            color={COLORS.white}
+            onPress={navigation.goBack}
+          />
+          <Icon name="bookmark-border" size={28} color={COLORS.white} />
+          </View>
       </ImageBackground>
       <View>
         <View style={style.iconContainer}>
@@ -83,7 +93,7 @@ const DetailsScreen = ({navigation, route}) => {
                 color: COLORS.grey,
                 marginLeft: 5,
               }}>
-              R700
+
             </Text>
             <Text
               style={{
@@ -92,7 +102,7 @@ const DetailsScreen = ({navigation, route}) => {
                 color: COLORS.grey,
                 marginLeft: 5,
               }}>
-              +breakfast
+              + breakfast
             </Text>
           </View>
         </View>
