@@ -11,10 +11,8 @@ const PropertyVew = ({navigation}) => {
         <>
             <SafeAreaView style={style.cover}>
 
-                <View style={style.backBox}>
-
                 <Text style={style.heading}>
-                        Mumbai Lodge
+                        Available rooms
 
                     </Text>
 
@@ -35,11 +33,23 @@ const PropertyVew = ({navigation}) => {
                                 </TouchableOpacity>
                             </View>
 
+                            <View style={style.picView}>
+                                <TouchableOpacity  onPress={() => navigation.navigate('searchroom', { name: 'searchroom' })}>
+                                    <Image style={style.lodge1} source={require("./../assets/images/lodge1.png")} />
+
+                                </TouchableOpacity>
+                            </View>
+
+                            <View style={style.picView}>
+                                <TouchableOpacity  onPress={() => navigation.navigate('searchroom', { name: 'searchroom' })}>
+                                    <Image style={style.lodge1} source={require("./../assets/images/lodge1.png")} />
+
+                                </TouchableOpacity>
+                            </View>
+
                         </View>
 
                     </View>
-
-                </View>
             </SafeAreaView>
 
         </>

@@ -165,7 +165,7 @@ const Home = ({navigation}) => {
           <Icon name="search" size={25} style={{marginLeft: 5}} />
           <TextInput
             placeholder="Search"
-            style={{fontSize: 20, paddingLeft: 10, width: 300}}
+            style={{fontSize: 20, paddingLeft: 10, width: 200}}
           />
         </View>
         <CategoryList />
@@ -230,10 +230,10 @@ const style = StyleSheet.create({
     height: 50,
     backgroundColor: COLORS.light,
     marginTop: 15,
-    marginLeft: 20,
-    borderTopLeftRadius: 30,
-    borderBottomLeftRadius: 30,
-    flexDirection: 'row',
+    marginLeft: 10,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+    // flexDirection: 'row',
     alignItems: 'center',
   },
   categoryListContainer: {

@@ -14,7 +14,7 @@ const ConfirmPayment = ({navigation}) => {
                 {/* <View style={style.backBox}> */}
 
                 <Text style={style.heading}>
-                        Mumbai Hotel
+                        Available Rooms
 
                     </Text>
 
@@ -38,9 +38,7 @@ const ConfirmPayment = ({navigation}) => {
 
                     </View>
                     </View>
-                    <Text>
-              Please Confirm Payment
-             </Text>
+                   
           
         
         <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
@@ -62,60 +60,60 @@ const style = StyleSheet.create({
         height: "100%",
 
     },
-    heading: {
+//     heading: {
       
-        fontWeight: 'bold',
-        fontSize: 25,
-        marginLeft: 35,
-        //fontFamily: 'ruthie',
+//         fontWeight: 'bold',
+//         fontSize: 25,
+//         marginLeft: 35,
+//         //fontFamily: 'ruthie',
         
 
 
-    },
-    // search: {
-    //     backgroundColor: "#d4d3cf",
-    //     marginLeft: 30,
-    //     borderRadius:50,
-    //     paddingLeft:100,
-    //     marginTop:30,
-    //     justifyContent: 'center',
-    //     width:"70%",
-    //     height:"5%",
+//     },
+//     // search: {
+//     //     backgroundColor: "#d4d3cf",
+//     //     marginLeft: 30,
+//     //     borderRadius:50,
+//     //     paddingLeft:100,
+//     //     marginTop:30,
+//     //     justifyContent: 'center',
+//     //     width:"70%",
+//     //     height:"5%",
 
-    // },
-    Button: {
+//     // },
+//     Button: {
 
        
        
-   },
+//    },
     
-    picView: {
+//     picView: {
 
-            height: 450,
-            borderBottomRightRadius: 40,
-            borderBottomLeftRadius: 40,
-            overflow: 'hidden',
-            marginBottom: 100,
-            paddingBottom: 70
+//             height: 450,
+//             borderBottomRightRadius: 40,
+//             borderBottomLeftRadius: 40,
+//             overflow: 'hidden',
+//             marginBottom: 100,
+//             paddingBottom: 70
           
-},
+// },
 
-    // HotelPic: {
-    //     height: "50%",
-    //     marginLeft: "8%",
-    //    width: "85%",
-    //     borderRadius: 10,
+//     // HotelPic: {
+//     //     height: "50%",
+//     //     marginLeft: "8%",
+//     //    width: "85%",
+//     //     borderRadius: 10,
 
 
-    // },
-    // line: {
-    //     marginBottom: 0,
-    //    marginLeft: "13%",
-    //     marginBottom: 30,
-    //     marginTop: 10,
-    //     color:"#d1d0cd",
+//     // },
+//     // line: {
+//     //     marginBottom: 0,
+//     //    marginLeft: "13%",
+//     //     marginBottom: 30,
+//     //     marginTop: 10,
+//     //     color:"#d1d0cd",
 
-    // },
+//     // },
    
     
 })

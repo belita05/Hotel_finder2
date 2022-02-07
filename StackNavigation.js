@@ -15,6 +15,7 @@ import ConfirmPayment from './Screens/ConfirmPayment';
 import Payment from './Screens/Payment';
 import EditProfile from './Screens/EditProfile';
 import UpdateProfile from './Screens/UpdateProfile';
+import PropertyView from './Screens/PropertyView';
 
 
 const Stack = createNativeStackNavigator();
@@ -36,6 +37,7 @@ const StackNavigation = () => {
         <Stack.Screen name="ConfirmPayment" component={ConfirmPayment}/>
         <Stack.Screen name= "Payment" component={Payment}/>
         <Stack.Screen name= "UpdateProfile" component={UpdateProfile}/>
+        <Stack.Screen name= "PropertyView" component={PropertyView}/>
 
  
       </Stack.Navigator>
