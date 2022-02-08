@@ -147,7 +147,7 @@ const Home = ({navigation}) => {
             Find your hotel
           </Text>
           <View style={{flexDirection: 'row'}}>
-            <Text style={{fontSize: 30, fontWeight: 'bold'}}>in </Text>
+            <Text style={{fontSize: 30, fontWeight: 'bold'}}>in</Text>
             <Text
               style={{fontSize: 30, fontWeight: 'bold', color: '#E3AC1E'}}>
               SA

@@ -1,10 +1,10 @@
 export const hotels = [
     {
       id: '1',
-      name: 'Mumbai Hotel ',
+      name: 'Bella Hotel ',
       location: 'Hans street,Central district',
       price: 120,
-      image: require('../assets/images/lodge1.png'),
+      image: require('../assets/images/lodge3.jpg'),
       details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
     },
     {
@@ -17,10 +17,10 @@ export const hotels = [
     },
     {
       id: '3',
-      name: 'Aluna Hotel',
+      name: 'Mumbai Hotel',
       location: 'Almond street',
       price: 90,
-      image: require('../assets/images/lodge3.jpg'),
+      image: require('../assets/images/lodge1.png'),
       details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
     },
     {
