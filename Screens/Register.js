@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import {useNavigation} from '@react-navigation/native'
 import { Image, ImageBackground,StyleSheet, Button,Text,TouchableOpacity, View,TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-// import { auth } from '../firebase';
-import firebase from 'firebase';
+import { auth ,firestore} from '../Screens/Firebase/firebase';
+// import firebase from 'firebase';
 
 const staticImage = require("./../assets/images/Picture1.jpg");
 const staticLogo = require("./../assets/images/test.png");
@@ -16,20 +16,20 @@ const Register = () => {
     const [RegisterEmail, setRegisterEmail] = useState("")
     const [registerPassword, setRegisterPassword] = useState("")
     const [user, setUser] = useState({});
-    const onAuthStateChanged = (auth, (currentUser) => {
-        setUser(currentUser);
-    });
+    // const onAuthStateChanged = (auth, (currentUser) => {
+    //     setUser(currentUser);
+    // });
     const register = async () =>{
 
     try{
-        await firebase.auth().createUserWithEmailAndPassword(RegisterEmail, registerPassword).then((result)=> {
+        await auth.createUserWithEmailAndPassword(RegisterEmail, registerPassword).then((result)=> {
             console.log(result.user)
             navigation.navigate("TabScreen")
 
         });
 
-    const currentUser=firebase.auth().currentUser;
-    const db= firebase.firestore();
+    const currentUser=auth.currentUser;
+    const db= firestore;
     db.collection("user")
     .doc(currentUser.uid)
     .set({
@@ -40,7 +40,7 @@ const Register = () => {
 
 }
 catch (error){
-    console.log(error.message);
+    console.log(error.message,"Error Message:");
 }
 // const [isPasswordVisibility, setIsPasswordVisibility] = useState(true);
 

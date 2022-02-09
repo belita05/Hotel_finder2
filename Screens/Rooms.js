@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, Image, SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
+import { FlatList, Image, SafeAreaView, StyleSheet, Text, View} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import Icon from 'react-native-vector-icons/FontAwesome';
 

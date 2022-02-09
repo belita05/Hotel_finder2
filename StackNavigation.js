@@ -6,7 +6,7 @@ import Login from './Screens/Login';
 import Home from './Screens/Home';
 import Register from './Screens/Register';
 import Password from './Screens/Password';
-import Booking from './Screens/Booking';
+// import Booking from './Screens/Booking';
 import TabScreen from './Screens/TabScreen';
 import DetailsScreen from './Screens/DetailsScreen';
 import Map from './Screens/Map';
