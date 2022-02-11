@@ -14,9 +14,11 @@ const navigation = useNavigation();
         <>
             <SafeAreaView style={styles.container}>
 
-                <Text style={{marginTop: 15, fontWeight: 'bold'}}>Mumbai Lodge</Text>
+            
+
+                {/* <Text style={{marginTop: 15, fontWeight: 'bold'}}>Mumbai Lodge</Text> */}
                
-             <Image source={require("../assets/images/lodge1.png")} style={{width:'90%',borderRadius: 5,height:'40%',marginTop:30, marginBottom: 30}}></Image>
+             {/* <Image source={require("../assets/images/lodge1.png")} style={{width:'90%',borderRadius: 5,height:'40%',marginTop:30, marginBottom: 30}}></Image>
               <View style={styles.inputBox} >
               <Icon name='calendar' size={20} color='#000000' style={{ margin: 5 }}></Icon>
               
@@ -25,7 +27,7 @@ const navigation = useNavigation();
                <View style={styles.inputBox} >
               <Icon name='user' size={20} color='#000000' style={{ margin: 5 }}></Icon>
                
-               <Text style={{marginTop:5, color: '#000000'}}> 1 room/s - 2 adults - 0 childern </Text>
+               <Text style={{marginTop:5, color: '#000000'}}> 1 room/s - 2 adults - 0 childern </Text> */}
                </View>
                {/* <View style={{flex:1,marginBottom:250,justifyContent: 'flex-end',width:360,height:70 }}>
        <Button onPress={()=> navigation.navigate("Login")} title='Check Availability' color={'#E3AC1E'} ></Button>
@@ -86,16 +88,11 @@ const styles = StyleSheet.create({
         margin: 5,
         borderRadius:5, 
     },
-    // button: {
-    //     elevation: 3,
-    //     width: '80%',
-    //     backgroundColor: "#E3AC1E",
-    //     color: '#fff',
-    //     height: 35,
-    //     borderRadius: 5,
-    //     margin: 15,
-    //     justifyContent: 'center',
-    //     alignItems: 'center'
-    // },
+     headerImage: {
+    height: 400,
+    borderBottomRightRadius: 40,
+    borderBottomLeftRadius: 40,
+    overflow: 'hidden',
+  },
 });
 export default AvailableRoom;

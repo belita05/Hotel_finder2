@@ -17,6 +17,7 @@ import Payment from './Screens/Payment';
 import UpdateProfile from './Screens/UpdateProfile';
 import PropertyView from './Screens/PropertyView';
 import Rooms from './Screens/Rooms';
+import ConfirmBooking from './Screens/ConfirmBooking';
 
 
 const Stack = createNativeStackNavigator();
@@ -39,7 +40,7 @@ const StackNavigation = () => {
         <Stack.Screen name= "UpdateProfile" component={UpdateProfile}/>
         <Stack.Screen name= "PropertyView" component={PropertyView}/>
         <Stack.Screen name= "Rooms" component={Rooms}/>
-        <Stack.Screen name= "AvailableRoom"
+        <Stack.Screen name= "ConfirmBooking" component={ConfirmBooking}/>
 
  
       </Stack.Navigator>
