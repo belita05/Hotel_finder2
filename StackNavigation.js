@@ -17,7 +17,7 @@ import Payment from './Screens/Payment';
 import UpdateProfile from './Screens/UpdateProfile';
 import PropertyView from './Screens/PropertyView';
 import Rooms from './Screens/Rooms';
-import AvailableRoom from './Screens/AvailableRoom';
+// import AvailableRoom from './Screens/AvailableRoom';
 import ConfirmBooking from './Screens/ConfirmBooking';
 
 
@@ -43,7 +43,7 @@ const StackNavigation = () => {
         <Stack.Screen name= "PropertyView" component={PropertyView}/>
         <Stack.Screen name= "Rooms" component={Rooms}/>
 
-        <Stack.Screen name= "AvailableRoom" component={AvailableRoom}/>
+        {/* <Stack.Screen name= "AvailableRoom" component={AvailableRoom}/> */}
         <Stack.Screen name= "ConfirmBooking" component={ConfirmBooking}/>
 
 

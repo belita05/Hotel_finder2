@@ -14,16 +14,15 @@ const Rooms = ({navigation}) => {
 
                         Available Rooms
                 </Text>
-<<<<<<< HEAD
+
 
                             {/* <View style={style.roomPic}>
                                 <TouchableOpacity  onPress={() => navigation.navigate("AvailableRoom")}>
                                     <Image style={style.bed3} source={require("./../assets/images/bed3.jpg")} />
                                     </TouchableOpacity> */}
                             {/* </View> */}
-                            <Image source={require('../assets/images/bed3.jpg')} style={style.bed3} onPress={() => navigation.navigate('AvailableRoom')}/>
-=======
-<TouchableOpacity  onPress={() => navigation.navigate("ConfirmBooking")}>
+                            {/* <Image source={require('../assets/images/bed3.jpg')} style={style.bed3} onPress={() => navigation.navigate('AvailableRoom')}/> */}
+                           <TouchableOpacity  onPress={() => navigation.navigate("ConfirmBooking")}>
                             <View style={style.roomPic}>
                                 
                                     <Image style={style.bed3} source={require("./../assets/images/bed3.jpg")} />
@@ -33,7 +32,7 @@ const Rooms = ({navigation}) => {
 
 
                             <View style={style.details}>
->>>>>>> 7a24fd0d21b29811ff424097829bbf2a16cdd457
+
                             <View style={{flexDirection: 'row'}}>
                             <Icon name="shower" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="tv" size={25} style={{marginRight: 40, paddingTop: 20}} />
