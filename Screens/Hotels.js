@@ -5,7 +5,7 @@ export const hotels = [
       location: 'Hans street,Central district',
       price: 450,
       image: require('../assets/images/lodge3.jpg'),
-      details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
+      details: `Description: Located in polokwane, Bella Hotel provides free private parking, free wifi, outdoor swimming pool, the property also has a gaarden`,
     },
     {
       id: '2',

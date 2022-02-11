@@ -13,8 +13,8 @@ const sub = require("./../assets/images/sub.png");
 const Register = () => {
     const navigation = useNavigation();
     const [FullName, setFullName] = useState("");
-    const [RegisterEmail, setRegisterEmail] = useState("")
-    const [registerPassword, setRegisterPassword] = useState("")
+    const [RegisterEmail, setRegisterEmail] = useState("");
+    const [registerPassword, setRegisterPassword] = useState("");
     const [user, setUser] = useState({});
     // const onAuthStateChanged = (auth, (currentUser) => {
     //     setUser(currentUser);

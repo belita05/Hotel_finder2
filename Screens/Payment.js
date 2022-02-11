@@ -24,14 +24,6 @@ const Payment = ({navigation}) => {
                         <Avatar
                             source={require('./../assets/images/image 38.png')}
 
-                            source={require('../assets/images/image 36.png')}
-                        ></Avatar>
-                        <Avatar
-                            source={require('../assets/images/image 37.png')}
-                        ></Avatar>
-                        <Avatar
-                            source={require('../assets/images/image 38.png')}
-
                         ></Avatar>
                     </View>
                     <Text> Card Number</Text>
@@ -39,7 +31,7 @@ const Payment = ({navigation}) => {
                    
           <TextInput
             
-            placeholderTextColor="#666666"
+            placeholderTextColor="#000000"
             keyboardType="number-pad"
             autoCorrect={false}
             style={[
@@ -55,13 +47,13 @@ const Payment = ({navigation}) => {
    
           <TextInput
        
-            placeholderTextColor="#666666"
+            placeholderTextColor="#000000"
             keyboardType="number-pad"
             autoCorrect={false}
             style={[
               styles.textInputStyle,
               {
-                color: 'black',
+                color: '#000000',
               },
             ]}
           />
@@ -71,7 +63,7 @@ const Payment = ({navigation}) => {
               <Text>Expiry Date </Text>
           <TextInput
         
-            placeholderTextColor="#666666"
+            placeholderTextColor="#000000"
             keyboardType="number-pad"
             autoCorrect={false}
             style={[
@@ -86,7 +78,7 @@ const Payment = ({navigation}) => {
               <Text>CVV </Text>
           <TextInput
         
-            placeholderTextColor="#666666"
+            placeholderTextColor="#000000"
             keyboardType="number-pad"
             autoCorrect={false}
             style={[
@@ -98,8 +90,8 @@ const Payment = ({navigation}) => {
           />
           </View>
 
-          <TouchableOpacity style={styles.commandButton} onPress={() => navigation.navigate('PaymentSuc')}>
-            </TouchableOpacity>
+          {/* <TouchableOpacity style={styles.commandButton} onPress={() => navigation.navigate('PaymentSuc')}>
+            </TouchableOpacity> */}
 
           <TouchableOpacity style={styles.commandButton} onPress={() => navigation.navigate('ConfirmPayment')}>
 
@@ -124,7 +116,7 @@ const styles = StyleSheet.create({
         flex: 1,
       //   marginTop: Platform.OS === 'ios' ? 0 : -12,
         paddingLeft: 10,
-        color: '#05375a',
+        color: '#000000',
       },
       action: {
         flexDirection: 'row',
@@ -141,20 +133,25 @@ const styles = StyleSheet.create({
         width:'100%',
         paddingLeft: 20,
         margin: 5,
-        borderColor: '#00BFFF',
+        borderColor: '#000000',
         backgroundColor: '#FFFFFF',
       },
     commandButton: {
       padding: 10,
-      borderRadius: 10,
-      backgroundColor: '#00BFFF',
+      borderRadius: 5,
+      backgroundColor: '#E3AC1E',
       alignItems: 'center',
       marginTop: 10,
+      width: 300,
+      alignItems:'center'
+      
+      
+      
     },
     panelButton: {
       padding: 13,
       borderRadius: 10,
-      backgroundColor: '#FF6347',
+      backgroundColor: '#E3AC1E',
       alignItems: 'center',
       marginVertical: 7,
     },

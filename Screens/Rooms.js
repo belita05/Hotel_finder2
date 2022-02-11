@@ -1,6 +1,5 @@
 import React from "react";
-import { FlatList, Image, SafeAreaView, StyleSheet, Text, View} from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { FlatList, Image, SafeAreaView, StyleSheet, Text, View,TouchableOpacity} from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
@@ -15,6 +14,7 @@ const Rooms = ({navigation}) => {
 
                         Available Rooms
                 </Text>
+<<<<<<< HEAD
 
                             {/* <View style={style.roomPic}>
                                 <TouchableOpacity  onPress={() => navigation.navigate("AvailableRoom")}>
@@ -22,34 +22,60 @@ const Rooms = ({navigation}) => {
                                     </TouchableOpacity> */}
                             {/* </View> */}
                             <Image source={require('../assets/images/bed3.jpg')} style={style.bed3} onPress={() => navigation.navigate('AvailableRoom')}/>
+=======
+<TouchableOpacity  onPress={() => navigation.navigate("ConfirmBooking")}>
+                            <View style={style.roomPic}>
+                                
+                                    <Image style={style.bed3} source={require("./../assets/images/bed3.jpg")} />
+                                    
+                            </View>
+                            </TouchableOpacity>
+
+
+                            <View style={style.details}>
+>>>>>>> 7a24fd0d21b29811ff424097829bbf2a16cdd457
                             <View style={{flexDirection: 'row'}}>
                             <Icon name="shower" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="tv" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="bed" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="wifi" size={25} style={{marginRight: 40, paddingTop: 20}} />
-                            <Icon name="pool" size={25} style={{marginRight: 40, paddingTop: 20}} />
-                            <Icon name="microwave" size={25} style={{marginRight: 40, paddingTop: 20}} />
+                            {/* <Icon name="microwave" size={25} style={{marginRight: 40, paddingTop: 20}} /> */}
+                             
                                 </View>
-                                <Text>
-                                 
+                                <Text style={{fontSize:18,marginRight:95, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
+                                Double dedluxe room,  Price per night R700
                                 </Text>
+                                {/* <Text style={{fontSize:18, marginLeft:15, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
+                                Price per night R700
+                                </Text> */}
+</View>
+
+                                <TouchableOpacity  onPress={() => navigation.navigate("ConfirmBooking")}>
                             <View style={style.roomPic1}>
-                                <TouchableOpacity  onPress={() => navigation.navigate("AvailableRoom")}>
+                                
                                     <Image style={style.bed4} source={require("./../assets/images/bed4.jpg")} />
-                                    </TouchableOpacity>
+                                   
                             </View>
+                            </TouchableOpacity>
+                            <View style={style.details}>
                             <View style={{flexDirection: 'row'}}>
-                            <Icon name="tub" size={25} style={{marginRight: 40, paddingTop: 20}} />
+                            <Icon name="bathtub" size={20} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="tv" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="bed" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="wifi" size={25} style={{marginRight: 40, paddingTop: 20}} />
-                            <Icon name="microwave" size={25} style={{marginRight: 40, paddingTop: 20}} />
-                            <Icon name="pool" size={25} style={{marginRight: 40, paddingTop: 20}} />
+                            
             
                                 </View>
-                                <Text>
-
+                                 <Text style={{fontSize:18,marginRight:95, marginTop: 10,fontSize: 20,fontWeight: 'bold'}}>
+                                2 Single bed room, Price per night R700
                                 </Text>
+                                {/* <Text style={{fontSize:18, marginLeft:15, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
+                                Price per night R700
+                                </Text> */}
+                                </View>
+                                
+                                 
+                                
 
                            
             </SafeAreaView>
@@ -64,12 +90,19 @@ const style = StyleSheet.create({
         height: "100%",
 
     },
+    details:{
+width:'100%',
+alignItems: 'center',
+
+
+
+ },
 
  heading: {
 
-  fontSize: 30,
   alignItems: 'center',
-  marginLeft: 100,
+  fontSize: 20,
+   fontWeight: 'bold'
 
 
 
@@ -77,7 +110,7 @@ const style = StyleSheet.create({
 
 bed4:{
     
-    marginTop: 120,
+    marginTop: 40,
     borderRadius: 10,
     height: 250,
     width: 450,
@@ -93,6 +126,7 @@ bed3:{
         },
         row:{
             margin: 20,
+            alignItems: 'center'
         }
    
     
