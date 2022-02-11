@@ -13,26 +13,12 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 let app;
-if(firebase.apps.length){
+if(!firebase.apps.length){
 app = firebase.initializeApp(firebaseConfig);
 }else{
   firebase.app;
 }
 const auth= firebase.auth();
 
-};
-
-let app;
-if(!firebase.apps.length){
- app = firebase.initializeApp(firebaseConfig);
-
-
-// export default firebase;let app;
-// if(!firebase.apps.length){
-//      app = firebase.initializeApp(firebaseConfig);
-}else{
-    firebase.app;
-}
-const auth=firebase.auth();
 
 export {auth};
