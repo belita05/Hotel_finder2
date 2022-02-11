@@ -5,7 +5,7 @@ import { View, Text, StyleSheet, SafeAreaView, TextInput,Button, Image, Touchabl
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
-const Booking = () => {
+const AvailableRoom = () => {
 const navigation = useNavigation();
 
 
@@ -98,4 +98,4 @@ const styles = StyleSheet.create({
     //     alignItems: 'center'
     // },
 });
-export default Booking;
+export default AvailableRoom;

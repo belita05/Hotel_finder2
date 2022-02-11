@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import {useNavigation} from '@react-navigation/native'
 import { Image, ImageBackground,StyleSheet, Button,Text,TouchableOpacity, View,TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { auth } from '../firebase';
-import firebase from 'firebase';
+import { auth ,firestore} from '../Screens/Firebase/firebase';
+// import firebase from 'firebase';
 
 const staticImage = require("./../assets/images/Picture1.jpg");
 const staticLogo = require("./../assets/images/test.png");
@@ -16,33 +16,53 @@ const Register = () => {
     const [RegisterEmail, setRegisterEmail] = useState("");
     const [registerPassword, setRegisterPassword] = useState("");
     const [user, setUser] = useState({});
-    const onAuthStateChanged = (auth, (currentUser) => {
-        setUser(currentUser);
-    });
+    // const onAuthStateChanged = (auth, (currentUser) => {
+    //     setUser(currentUser);
+    // });
     const register = async () =>{
 
     try{
-        await firebase.auth().createUserWithEmailAndPassword(registerEmail, registerPassword).then((result)=> {
+        await auth.createUserWithEmailAndPassword(RegisterEmail, registerPassword).then((result)=> {
             console.log(result.user)
+            navigation.navigate("TabScreen")
 
         });
 
-    const currentUser=firebase.auth().currentUser;
-    const db= firebase.firestore();
+    const currentUser=auth.currentUser;
+    const db= firestore;
     db.collection("user")
     .doc(currentUser.uid)
     .set({
-        email:currentUser.registerEmail,
+        email:currentUser.RegisterEmail,
         password:currentUser.setRegisterPassword,
         fullnames: FullName
     });
 
 }
 catch (error){
-    console.log(error.message);
+    console.log(error.message,"Error Message:");
 }
+// const [isPasswordVisibility, setIsPasswordVisibility] = useState(true);
 
-    };
+//   const changePasswordViewState = () => {
+//     setIsPasswordVisibility(!isPasswordVisibility);
+//   };
+
+//   const PassWordViewState = () => (
+//     <TouchableOpacity
+//       activeOpacity={0.7}
+//       onPress={() => changePasswordViewState()}
+//     >
+//       {isPasswordVisibility ? (
+//         <Icon name="eye-slash" type="font-awesome" style={{ marginLeft: 10 }} />
+//       ) : (
+//         <Icon name="eye" type="font-awesome" style={{ marginLeft: 10 }} />
+//       )}
+//     </TouchableOpacity>
+
+      };
+
+
 
    
     return (
@@ -58,34 +78,34 @@ catch (error){
        <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Enter Your First Name </Text>
        </View>
-      <TextInput style={styles.Input}> </TextInput>
+      <TextInput onChangeText = {(text)=> setFullName(text)} style={styles.Input}> </TextInput>
         <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Enter Your Last Name </Text>
        </View>
-      <TextInput style={styles.Input}> </TextInput>
+      <TextInput onChangeText = {(text)=> setFullName(text)} style={styles.Input}> </TextInput>
       <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Enter Your Contact Number </Text>
        </View>
-      <TextInput style={styles.Input}> </TextInput>
+      <TextInput onChangeText = {(text)=> setFullName(text)} style={styles.Input}> </TextInput>
       <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Enter Your Email Address </Text>
        </View>
-      <TextInput style={styles.Input}> </TextInput>
+      <TextInput onChangeText = {(text)=> setRegisterEmail(text)} style={styles.Input}> </TextInput>
        <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Enter Your Password</Text>
        </View>
-      <TextInput style={styles.Input}> </TextInput>
+      <TextInput onChangeText = {(text)=> setRegisterPassword(text)} style={styles.Input}> </TextInput>
       <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Confirm Your Password</Text>
        </View>
-      <TextInput style={styles.Input}> </TextInput>
+      <TextInput onChangeText = {(text)=> setRegisterPassword(text)} style={styles.Input}> </TextInput>
 
        
        {/* <View style={{marginTop:10,marginBottom:20}}>
        <Button onPress={()=> navigation.navigate("Home")} title='Create Account' color={"#E37D1E"} ></Button>
        </View> */}
        <View style={{marginTop:40,marginBottom:20}}>
-       <Button onPress={()=> navigation.navigate("TabScreen")} title='Create Account' color={"#E37D1E"} ></Button>
+       <Button onPress={()=>register() } title='Create Account' color={"#E37D1E"} ></Button>
        </View>
        {/* <View style={{marginTop:10,marginBottom:20}}>
        <Button onPress={()=> navigation.navigate("TabScreen")} title='Login' color={"#E37D1E"} ></Button>

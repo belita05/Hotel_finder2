@@ -19,17 +19,6 @@ const DetailsScreen = ({navigation, route}) => {
         backgroundColor="rgba(0,0,0,0)"
       />
       <ImageBackground style={style.headerImage} source={item.image}>
-
-
-        <View style={style.header}>
-          <Icon
-            name="arrow-back-ios"
-            size={28}
-            color={COLORS.white}
-            onPress={navigation.goBack}
-          />
-          <Icon name="bookmark-border" size={28} color={COLORS.white} />
-          </View>
       </ImageBackground>
       <View>
         <View style={style.iconContainer}>
@@ -83,7 +72,7 @@ const DetailsScreen = ({navigation, route}) => {
             alignItems: 'center',
           }}>
           <Text style={{fontSize: 20, fontWeight: 'bold'}}>
-            Price per night
+            Price includes breakfast
           </Text>
           <View style={style.priceTag}>
             <Text
@@ -95,7 +84,7 @@ const DetailsScreen = ({navigation, route}) => {
               }}>
 
             </Text>
-            <Text
+            {/* <Text
               style={{
                 fontSize: 12,
                 fontWeight: 'bold',
@@ -103,12 +92,12 @@ const DetailsScreen = ({navigation, route}) => {
                 marginLeft: 5,
               }}>
               + breakfast
-            </Text>
+            </Text> */}
           </View>
         </View>
         <View style={style.btn}>
         <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
-       <Button onPress={()=> navigation.navigate("ConfirmPayment")} title='Book Now' color={'#E3AC1E'} ></Button>
+       <Button onPress={()=> navigation.navigate("Rooms")} title='Check Availability' color={'#E3AC1E'} ></Button>
        </View>
         </View>
       </View>

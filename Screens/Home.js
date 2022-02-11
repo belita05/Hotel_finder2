@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import React, {useState} from 'react';
 import { Dimensions, FlatList, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image, Animated, ColorPropType,} from 'react-native';
 import { Icon } from 'react-native-elements';
 // import Icon from 'react-native-vector-icons/Ionicons';
@@ -8,6 +9,7 @@ import { hotels } from './Hotels';
 
 const {width} = Dimensions.get('screen');
 const cardWidth = width / 1.8;
+
 
 
 const Home = ({navigation}) => {
@@ -138,6 +140,29 @@ const Home = ({navigation}) => {
       </View>
     );
   };
+  const [search, setSearch] = useState('');
+  const [filteredDataSource, setFilteredDataSource] = useState([]);
+  const searchFilterFunction = (text) => {
+      
+    if (text) {
+      
+          const newData = masterDataSource.filter(
+          function (item) {
+          const itemData = item.title
+            ? item.title.toUpperCase()
+            : ''.toUpperCase();
+          const textData = text.toUpperCase();
+          return itemData.indexOf(textData) > -1;
+      });
+      setFilteredDataSource(newData);
+      setSearch(text);
+    } else {
+     
+      setFilteredDataSource(masterDataSource);
+      setSearch(text);
+    }
+  };
+
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
@@ -147,7 +172,7 @@ const Home = ({navigation}) => {
             Find your hotel
           </Text>
           <View style={{flexDirection: 'row'}}>
-            <Text style={{fontSize: 30, fontWeight: 'bold'}}>in </Text>
+            <Text style={{fontSize: 30, fontWeight: 'bold'}}>in</Text>
             <Text
               style={{fontSize: 30, fontWeight: 'bold', color: '#E3AC1E'}}>
               SA
@@ -161,13 +186,17 @@ const Home = ({navigation}) => {
       </View>
      
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={style.searchInputContainer}>
-          <Icon name="search" size={25} style={{marginLeft: 5}} />
-          <TextInput
-            placeholder="Search"
-            style={{fontSize: 20, paddingLeft: 10, width: 300}}
+        {/* <View style={style.searchInputContainer}> */}
+          
+        <TextInput
+            style={style.textInputStyle}
+            onChangeText={(text) => searchFilterFunction(text)}
+            value={search}
+            underlineColorAndroid="transparent"
+            placeholder="Search Here"
           />
-        </View>
+          
+        {/* </View> */}
         <CategoryList />
         <View>
           <Animated.FlatList
@@ -226,13 +255,26 @@ const style = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 20,
   },
-  searchInputContainer: {
-    height: 50,
-    backgroundColor: COLORS.light,
-    marginTop: 15,
+  textInputStyle: {
+    height: 40,
+    width: 300,
+    borderWidth: 1,
+    paddingLeft: 20,
+    margin: 5,
+    borderRadius: 5,
+    borderColor: '#dcdcdc',
+    backgroundColor: '#dcdcdc',
     marginLeft: 20,
-    borderTopLeftRadius: 30,
-    borderBottomLeftRadius: 30,
+    
+  },
+ 
+  searchInputContainer: {
+    height: 60,
+    width: 400,
+    backgroundColor: COLORS.light,
+    marginTop: 10,
+    marginLeft: 20,
+    borderRadius: 5,
     flexDirection: 'row',
     alignItems: 'center',
   },
