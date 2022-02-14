@@ -42,8 +42,8 @@ const StackNavigation = () => {
         <Stack.Screen name= "UpdateProfile" component={UpdateProfile}/>
         <Stack.Screen name= "PropertyView" component={PropertyView}/>
         <Stack.Screen name= "Rooms" component={Rooms}/>
-
-        {/* <Stack.Screen name= "AvailableRoom" component={AvailableRoom}/> */}
+{/* 
+        <Stack.Screen name= "AvailableRoom" component={AvailableRoom}/> */}
         <Stack.Screen name= "ConfirmBooking" component={ConfirmBooking}/>
 
 

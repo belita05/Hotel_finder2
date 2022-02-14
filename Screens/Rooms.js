@@ -15,7 +15,6 @@ const Rooms = ({navigation}) => {
                         Available Rooms
                 </Text>
 
-
                             {/* <View style={style.roomPic}>
                                 <TouchableOpacity  onPress={() => navigation.navigate("AvailableRoom")}>
                                     <Image style={style.bed3} source={require("./../assets/images/bed3.jpg")} />
@@ -32,7 +31,6 @@ const Rooms = ({navigation}) => {
 
 
                             <View style={style.details}>
-
                             <View style={{flexDirection: 'row'}}>
                             <Icon name="shower" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="tv" size={25} style={{marginRight: 40, paddingTop: 20}} />
