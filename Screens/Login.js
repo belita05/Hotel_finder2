@@ -4,33 +4,16 @@ import { useNavigation } from '@react-navigation/native'
 import { Image, ImageBackground, StyleSheet, Button, Text, TouchableOpacity, View } from 'react-native';
 // import { SafeAreaView } from 'react-native-safe-area-context';
 import { TextInput } from 'react-native-gesture-handler';
+import { auth ,firestore} from '../Screens/Firebase/firebase';
 
 const staticImage = require("./../assets/images/Picture1.jpg");
 const staticLogo = require("./../assets/images/test.png");
 const sub = require("./../assets/images/sub.png");
 
 const Login = () => {
-    
-    const [email,setEmail] = useState('')
-    const [password, setPassword] = useState('')
     const navigation = useNavigation()
-
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(user=>{
-            if (user){
-                navigation.navigate("Home")
-            }
-        })
-        return unsubscribes
-    }, [])
-    const handleSignUp = ()=> {
-        auth
-        .createUserWithEmailAndPassword(email,password)
-        .then(userCredentials => {
-            const user.log('Registered with:', user, email)
-        })
-        .catch(error=> alert(error.message))
-    }
+    
+    
 
     const handleLogin = () =>{
         auth
@@ -41,6 +24,7 @@ const Login = () => {
         })
         .catch(error => alert(error.message))
     }
+    
     return (
         <View style={styles.container}>
             <ImageBackground source={staticImage} style={styles.ImageBackground}>
@@ -69,7 +53,7 @@ const Login = () => {
                     </View>
 
                     
-                    <TouchableOpacity onPress={() => navigation.navigate("Password")}>
+                    <TouchableOpacity onPress={()=>Login() }>
                         <Text style= {{color: '#fff', justifyContent: "center", alignItems: "center", marginBottom: 5}}>
                         Forgot Password? Click here
                         </Text>

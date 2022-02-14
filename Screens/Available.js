@@ -28,13 +28,12 @@ const navigation = useNavigation();
               <Icon name='user' size={20} color='#000000' style={{ margin: 5 }}></Icon>
                
                <Text style={{marginTop:5, color: '#000000'}}> 1 room/s - 2 adults - 0 childern </Text> */}
-               </View>
+               {/* </View> */}
                {/* <View style={{flex:1,marginBottom:250,justifyContent: 'flex-end',width:360,height:70 }}>
        <Button onPress={()=> navigation.navigate("Login")} title='Check Availability' color={'#E3AC1E'} ></Button>
 </View> */}
                
-                <ScrollView style={{width:'100%'}}
-                 horizontal={true}>
+                <ScrollView style={{width:'100%'}} horizontal={true}>
                 {/* {
                             room.map((data) => (
 
@@ -81,7 +80,6 @@ const styles = StyleSheet.create({
     inputBox: {
         flexDirection: 'row',
         backgroundColor: '#FAF1A4',
-        //color: '#FAF1A4',
         elevation: 3,
         width: '80%',
         height: 40,
