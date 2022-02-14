@@ -10,7 +10,37 @@ const staticLogo = require("./../assets/images/test.png");
 const sub = require("./../assets/images/sub.png");
 
 const Login = () => {
-    const navigation = useNavigation();
+    
+    const [email,setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const navigation = useNavigation()
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user=>{
+            if (user){
+                navigation.navigate("Home")
+            }
+        })
+        return unsubscribes
+    }, [])
+    const handleSignUp = ()=> {
+        auth
+        .createUserWithEmailAndPassword(email,password)
+        .then(userCredentials => {
+            const user.log('Registered with:', user, email)
+        })
+        .catch(error=> alert(error.message))
+    }
+
+    const handleLogin = () =>{
+        auth
+        .signInWithEmailAndPassword(email,password)
+        .then(userCredentials =>{
+            const user = userCredentials.user;
+            console.log('Logged in with:', user.email);
+        })
+        .catch(error => alert(error.message))
+    }
     return (
         <View style={styles.container}>
             <ImageBackground source={staticImage} style={styles.ImageBackground}>
@@ -24,11 +54,11 @@ const Login = () => {
                     <View style={{ color: '#fff', justifyContent: 'center', alignItems: "center", marginBottom: 5 }}>
                         <Text style={{ color: '#fff' }}>Enter Your Email </Text>
                     </View>
-                    <TextInput style={styles.Input}> </TextInput>
+                    <TextInput onPress = {handleLogin} style={styles.Input}> </TextInput>
                     <View style={{ color: '#fff', justifyContent: 'center', alignItems: "center", marginBottom: 10 }}>
                         <Text style={{ color: '#fff' }}>Enter Your Password</Text>
                     </View>
-                    <TextInput style={styles.Input}> </TextInput>
+                    <TextInput onPress = {handleLogin} style={styles.Input}> </TextInput>
                     
                     <View style={{ marginBottom: 10, marginTop: 20}}>
                         <Button onPress={() => navigation.navigate("TabScreen")} title='Login' color={'#E3AC1E'} ></Button>
