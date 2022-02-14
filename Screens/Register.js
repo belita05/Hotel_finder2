@@ -12,8 +12,8 @@ const staticLogo = require("./../assets/images/test.png");
 const sub = require("./../assets/images/sub.png");
 
 const register = () => {
-    const [email,setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email,setEmail] = useState()
+    const [password, setPassword] = useState()
     const navigation = useNavigation()
 
     // useEffect(() => {
@@ -53,17 +53,18 @@ const register = () => {
        </View>
       <TextInput  style={styles.Input}> </TextInput>
         <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
+            
        <Text style={{color:'#fff'}}>Enter Your Last Name </Text>
        </View>
       <TextInput  style={styles.Input}> </TextInput>
       <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Enter Your Contact Number </Text>
        </View>
-      <TextInput value= {email} onChangeText={(text) => setEmail(text)} style={styles.Input}> </TextInput>
+      <TextInput onChangeText={(text) => setEmail(text)} style={styles.Input}> </TextInput>
       <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Enter Your Email Address </Text>
        </View>
-      <TextInput value= {password} onChangeText={(text) => setPassword(text)} style={styles.Input}> </TextInput>
+      <TextInput  onChangeText={(text) => setPassword(text)} style={styles.Input}> </TextInput>
        <View style={{color:'#fff',justifyContent:'center',alignItems:"center",marginBottom:5}}>
        <Text style={{color:'#fff'}}>Enter Your Password</Text>
        </View>

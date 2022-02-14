@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import { Image, ImageBackground, StyleSheet, Button, Text, TouchableOpacity, View } from 'react-native';
 // import { SafeAreaView } from 'react-native-safe-area-context';
 import { TextInput } from 'react-native-gesture-handler';
-import { auth ,firestore} from '../Screens/Firebase/firebase';
+import { auth } from '../Screens/Firebase/firebase';
 
 const staticImage = require("./../assets/images/Picture1.jpg");
 const staticLogo = require("./../assets/images/test.png");
