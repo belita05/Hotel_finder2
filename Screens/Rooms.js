@@ -40,7 +40,7 @@ const Rooms = ({navigation}) => {
                              
                                 </View>
                                 <Text style={{fontSize:18,marginRight:95, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
-                                Double dedluxe room,  Price per night R700
+                                Double deluxe room,  Price per night R700
                                 </Text>
                                 {/* <Text style={{fontSize:18, marginLeft:15, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
                                 Price per night R700
@@ -64,7 +64,7 @@ const Rooms = ({navigation}) => {
             
                                 </View>
                                  <Text style={{fontSize:18,marginRight:95, marginTop: 10,fontSize: 20,fontWeight: 'bold'}}>
-                                2 Single bed room, Price per night R700
+                                2 Single bedroom, Price per night R700
                                 </Text>
                                 {/* <Text style={{fontSize:18, marginLeft:15, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
                                 Price per night R700

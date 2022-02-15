@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native'
 import { Image, ImageBackground, StyleSheet, Button, Text, TouchableOpacity, View } from 'react-native';
 // import { SafeAreaView } from 'react-native-safe-area-context';
@@ -14,17 +14,19 @@ const Login = () => {
     const navigation = useNavigation()
     
     
-
-    const handleLogin = () =>{
+        const [email, setEmail] = useState()
+        const [password, setPassword] = useState()
+        const handleLogin = () =>{
         auth
         .signInWithEmailAndPassword(email,password)
         .then(userCredentials =>{
             const user = userCredentials.user;
             console.log('Logged in with:', user.email);
+            navigation.navigate("Home")
         })
         .catch(error => alert(error.message))
     }
-    
+    console.log(email)
     return (
         <View style={styles.container}>
             <ImageBackground source={staticImage} style={styles.ImageBackground}>
@@ -38,14 +40,14 @@ const Login = () => {
                     <View style={{ color: '#fff', justifyContent: 'center', alignItems: "center", marginBottom: 5 }}>
                         <Text style={{ color: '#fff' }}>Enter Your Email </Text>
                     </View>
-                    <TextInput onPress = {handleLogin} style={styles.Input}> </TextInput>
+                    <TextInput value={email} placeholder="email" onChangeText={(text) =>  setEmail(text) }  style={styles.Input}/> 
                     <View style={{ color: '#fff', justifyContent: 'center', alignItems: "center", marginBottom: 10 }}>
                         <Text style={{ color: '#fff' }}>Enter Your Password</Text>
                     </View>
-                    <TextInput onPress = {handleLogin} style={styles.Input}> </TextInput>
+                    <TextInput value={password} placeholder="password" onChangeText={(text) =>  setPassword(text) }  style={styles.Input}/> 
                     
                     <View style={{ marginBottom: 10, marginTop: 20}}>
-                        <Button onPress={() => navigation.navigate("TabScreen")} title='Login' color={'#E3AC1E'} ></Button>
+                        <Button onPress={() => handleLogin()} title='Login' color={'#E3AC1E'} ></Button>
                     </View>
 
                     <Button onPress={() => navigation.navigate("Register")} title='Register' color={"#E37D1E"} ></Button>
@@ -55,8 +57,11 @@ const Login = () => {
                     
                     <TouchableOpacity onPress={()=>Login() }>
                         <Text style= {{color: '#fff', justifyContent: "center", alignItems: "center", marginBottom: 5}}>
-                        Forgot Password? Click here
+                        Forgot Password? Click Here
                         </Text>
+                        {/* passwordReset: email => {
+  return firebase.auth().sendPasswordResetEmail(email)
+}, */}
                     </TouchableOpacity>
                         
                            
