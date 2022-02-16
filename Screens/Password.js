@@ -1,10 +1,11 @@
-// import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native'
-import { Image, ImageBackground, StyleSheet, Button, Text, View, TextInput } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Button, Text, View, TextInput, Alert } from 'react-native';
 // import { SafeAreaView } from 'react-native-safe-area-context';
 // import { TextInput } from 'react-native-gesture-handler';
 import { auth } from './Firebase/firebase';
+ 
 
 
 const staticImage = require("./../assets/images/Picture1.jpg");
@@ -12,8 +13,8 @@ const staticLogo = require("./../assets/images/test.png");
 const sub = require("./../assets/images/sub.png");
 
 const Password = () => {
-    const navigation = useNavigation();
-    // const [email, setEmail] = useState()
+const navigation = useNavigation();
+    
 
 
         const resetPassword = () => {
@@ -22,8 +23,23 @@ const Password = () => {
         }).catch(err => {
             alert(error.message)
         })
+        navigation.navigate("Login")
 
     }
+    
+// const Password = () => {
+//     const navigation = useNavigation();
+//     const {resetPassword}= useAuth()
+//     const [email,setEmail]= useAuth();
+//     const reset = async()=> {
+//         try{
+//             await resetPassword(email)
+//             setEmail('')
+//         }catch(error){
+//             Alert.alert(error.message)
+//         }
+//     }
+
     return (
 
         <View style={styles.container}>
@@ -40,7 +56,7 @@ const Password = () => {
                     <View style={{ color: '#fff', justifyContent: 'center', alignItems: "center", marginBottom: 5, marginTop: 20 }}>
                         <Text style={{ color: '#fff' }}>Enter Your Email Address </Text>
                     </View>
-                    <TextInput value={email} placeholder="email" onChangeText={(text) => setEmail(text)} style={styles.Input} />
+                    <TextInput value={email} placeholder="email" onChangeText={(text) => resetPassword (text)} style={styles.Input} />
 
 
                 </View>
@@ -80,6 +96,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FAF1A4',
         height: 39,
         marginBottom: 5,
+    
 
     }
 

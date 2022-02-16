@@ -39,7 +39,7 @@ const Rooms = ({navigation}) => {
                             {/* <Icon name="microwave" size={25} style={{marginRight: 40, paddingTop: 20}} /> */}
                              
                                 </View>
-                                <Text style={{fontSize:18,marginRight:95, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
+                                <Text style={{fontSize:18,marginRight:95, marginTop: 10, fontSize: 15}}>
                                 Double deluxe room,  Price per night R700
                                 </Text>
                                 {/* <Text style={{fontSize:18, marginLeft:15, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
@@ -56,14 +56,14 @@ const Rooms = ({navigation}) => {
                             </TouchableOpacity>
                             <View style={style.details}>
                             <View style={{flexDirection: 'row'}}>
-                            <Icon name="bathtub" size={20} style={{marginRight: 40, paddingTop: 20}} />
+                            <Icon name="bathtub" size={20} style={{marginRight: 40, paddingTop: 20, }} />
                             <Icon name="tv" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="bed" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             <Icon name="wifi" size={25} style={{marginRight: 40, paddingTop: 20}} />
                             
             
                                 </View>
-                                 <Text style={{fontSize:18,marginRight:95, marginTop: 10,fontSize: 20,fontWeight: 'bold'}}>
+                                 <Text style={{fontSize:18,marginRight:95, marginTop: 10,fontSize: 15}}>
                                 2 Single bedroom, Price per night R700
                                 </Text>
                                 {/* <Text style={{fontSize:18, marginLeft:15, marginTop: 10, fontSize: 20,fontWeight: 'bold'}}>
@@ -89,7 +89,7 @@ const style = StyleSheet.create({
     },
     details:{
 width:'100%',
-alignItems: 'center',
+margin: 10
 
 
 
@@ -99,7 +99,8 @@ alignItems: 'center',
 
   alignItems: 'center',
   fontSize: 20,
-   fontWeight: 'bold'
+   fontWeight: 'bold',
+   margin: 10
 
 
 
@@ -110,14 +111,17 @@ bed4:{
     marginTop: 40,
     borderRadius: 10,
     height: 250,
-    width: 450,
+    width: 400,
+    margin: 10
 
 },
 bed3:{
-    marginTop: 30,
+    marginTop: 40,
     borderRadius: 10,
     height: 250,
-    width: 450,
+    width: 400,
+    margin: 10
+    
     
     
         },

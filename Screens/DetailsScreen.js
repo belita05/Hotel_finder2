@@ -1,10 +1,14 @@
-import React from 'react';
+
+import React, {useState} from 'react';
 import {ImageBackground, ScrollView, StatusBar, StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import DatePicker from 'react-native-datepicker'
 import COLORS from './colors';
 
 const DetailsScreen = ({navigation, route}) => {
   const item = route.params;
+  const [date, setDate] = useState('09-10-2020');
+
 
   return (
     <ScrollView
@@ -71,35 +75,75 @@ const DetailsScreen = ({navigation, route}) => {
             paddingLeft: 20,
             alignItems: 'center',
           }}>
-          <Text style={{fontSize: 20, fontWeight: 'bold'}}>
+          {/* <Text style={{fontSize: 20, fontWeight: 'bold'}}>
             Price includes breakfast
-          </Text>
-          <View style={style.priceTag}>
-            <Text
-              style={{
-                fontSize: 16,
-                fontWeight: 'bold',
-                color: COLORS.grey,
-                marginLeft: 5,
-              }}>
-
-            </Text>
-            {/* <Text
-              style={{
-                fontSize: 12,
-                fontWeight: 'bold',
-                color: COLORS.grey,
-                marginLeft: 5,
-              }}>
-              + breakfast
-            </Text> */}
-          </View>
+          </Text> */}
+          
         </View>
+        <View style={{flexDirection: 'row'}}>
+        
+        <DatePicker
+        style={{width: 165}}
+        date={date}
+        mode="date"
+        // placeholder="check in"
+        format="YYYY-MM-DD"
+        // minDate="0"
+        // maxDate="0"
+        confirmBtnText="Confirm"
+        cancelBtnText="Cancel"
+        customStyles={{
+          dateIcon: {
+            position: 'absolute',
+            left: 0,
+            top: 4,
+            marginLeft: 20,
+            marginRight: 20
+
+          },
+          dateInput: {
+            marginLeft: 40,
+            backgroundColor:COLORS.white,
+          }
+          // ... You can check the source to find the other keys.
+        }}
+        onDateChange={(date) => {setDate(date)}}
+      />
+      
+
+<DatePicker
+        style={{width: 165}}
+        date={date}
+        mode="date"
+        // placeholder="select date"
+        format="YYYY-MM-DD"
+        // minDate="2016-05-01"
+        // maxDate="2016-06-01"
+        confirmBtnText="Confirm"
+        cancelBtnText="Cancel"
+        customStyles={{
+          dateIcon: {
+            position: 'absolute',
+            left: 0,
+            top: 4,
+            marginLeft: 20,
+            marginRight: 20
+          },
+          dateInput: {
+            marginLeft: 40,
+            backgroundColor:COLORS.white,
+          }
+          // ... You can check the source to find the other keys.
+        }}
+        onDateChange={(date) =>  {setDate(date)}}
+      />
+      </View>
         <View style={style.btn}>
         <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
        <Button onPress={()=> navigation.navigate("Rooms")} title='Check Availability' color={'#E3AC1E'} ></Button>
        </View>
         </View>
+
       </View>
     </ScrollView>
   );

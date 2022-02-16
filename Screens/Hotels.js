@@ -13,7 +13,7 @@ export const hotels = [
       location: 'Biccard street',
       price: 750,
       image: require('../assets/images/lodge2.png'),
-      details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
+      details: `Description: Located in polokwane, Bella Hotel provides free private parking, free wifi, outdoor swimming pool, the property also has a gaarden`,
     },
     {
       id: '3',
@@ -21,7 +21,7 @@ export const hotels = [
       location: 'Almond street',
       price: 900,
       image: require('../assets/images/lodge1.png'),
-      details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
+      details: `Description: Located in polokwane, Bella Hotel provides free private parking, free wifi, outdoor swimming pool, the property also has a gaarden`,
     },
     {
       id: '4',
@@ -29,7 +29,7 @@ export const hotels = [
       location: 'Main street',
       price: 550,
       image: require('../assets/images/lodge4.jpg'),
-      details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id leo. Velit euismod in pellentesque massa placerat duis ultricies lacus sed. Justo laoreet sit amet cursus sit`,
+      details: `Description: Located in polokwane, Bella Hotel provides free private parking, free wifi, outdoor swimming pool, the property also has a gaarden`,
     },
   ];
   

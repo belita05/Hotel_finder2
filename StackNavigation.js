@@ -10,6 +10,7 @@ import Password from './Screens/Password';
 import TabScreen from './Screens/TabScreen';
 import DetailsScreen from './Screens/DetailsScreen';
 import Map from './Screens/Map';
+
 // import ConfirmPayment from './Screens/ConfirmPayment';
 // import Hotels from '.Screens/Hotels';
 import Payment from './Screens/Payment';
@@ -19,6 +20,7 @@ import PropertyView from './Screens/PropertyView';
 import Rooms from './Screens/Rooms';
 // import AvailableRoom from './Screens/AvailableRoom';
 import ConfirmBooking from './Screens/ConfirmBooking';
+// import ResetPassword from './Screens/ResetPassword';
 
 
 
@@ -42,8 +44,8 @@ const StackNavigation = () => {
         <Stack.Screen name= "UpdateProfile" component={UpdateProfile}/>
         <Stack.Screen name= "PropertyView" component={PropertyView}/>
         <Stack.Screen name= "Rooms" component={Rooms}/>
-{/* 
-        <Stack.Screen name= "AvailableRoom" component={AvailableRoom}/> */}
+ 
+        {/* <Stack.Screen name= "AvailableRoom" component={AvailableRoom}/>  */}
         <Stack.Screen name= "ConfirmBooking" component={ConfirmBooking}/>
 
 

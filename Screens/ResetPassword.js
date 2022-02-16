@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Notification = () => {
+const ResetPassword = () => {
   return (
     <View>
-      <Text>Notification</Text>
+      <Text>ResetPassword</Text>
     </View>
   )
 }
 
-export default Notification
+export default ResetPassword
 
 const styles = StyleSheet.create({})

@@ -22,7 +22,7 @@ const Login = () => {
         .then(userCredentials =>{
             const user = userCredentials.user;
             console.log('Logged in with:', user.email);
-            navigation.navigate("Home")
+            navigation.navigate("TabScreen")
         })
         .catch(error => alert(error.message))
     }
@@ -55,7 +55,7 @@ const Login = () => {
                     </View>
 
                     
-                    <TouchableOpacity onPress={()=>Login() }>
+                    <TouchableOpacity onPress={()=>navigation.navigate("Password") }>
                         <Text style= {{color: '#fff', justifyContent: "center", alignItems: "center", marginBottom: 5}}>
                         Forgot Password? Click Here
                         </Text>

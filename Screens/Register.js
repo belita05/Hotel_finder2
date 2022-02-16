@@ -11,7 +11,7 @@ const staticImage = require("./../assets/images/Picture1.jpg");
 const staticLogo = require("./../assets/images/test.png");
 const sub = require("./../assets/images/sub.png");
 
-    const register = () => {
+    const Register = () => {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const navigation = useNavigation()
@@ -104,7 +104,7 @@ const sub = require("./../assets/images/sub.png");
     )
 }
 
-export default register
+export default Register
 const styles = StyleSheet.create({
     container: {
         flex: 1,
