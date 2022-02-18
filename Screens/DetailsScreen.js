@@ -83,7 +83,7 @@ const DetailsScreen = ({navigation, route}) => {
         <View style={{flexDirection: 'row'}}>
         
         <DatePicker
-        style={{width: 165}}
+        style={style.calender}
         date={date}
         mode="date"
         // placeholder="check in"
@@ -103,6 +103,7 @@ const DetailsScreen = ({navigation, route}) => {
           },
           dateInput: {
             marginLeft: 40,
+            width: 150,
             backgroundColor:COLORS.white,
           }
           // ... You can check the source to find the other keys.
@@ -131,6 +132,7 @@ const DetailsScreen = ({navigation, route}) => {
           },
           dateInput: {
             marginLeft: 40,
+        
             backgroundColor:COLORS.white,
           }
           // ... You can check the source to find the other keys.
@@ -159,6 +161,10 @@ const style = StyleSheet.create({
     marginHorizontal: 20,
     borderRadius: 10,
   },
+
+calender: {
+marginLeft: 30
+},
 
   priceTag: {
     height: 40,

@@ -19,15 +19,17 @@ const TabScreen = () => {
     return (
         <>
             <Tab.Navigator>
-            <Tab.Screen name ={"Home"} component={Home}      options={{
-          tabBarLabel: 'Home',
-          tabBarColor: '#000000',
-          headerShown :false,
+          <Tab.Screen name ={"Home"} component={Home}      options={{
+           headerShown: false,
+           tabBarLabel: 'Home',
+           tabBarColor: '#000000',
+          
           tabBarIcon: ({  }) => (
           <Icon name="home" color={'#000000'} size={24} />
           ),
         }} />
 <Tab.Screen name ={"History"} component={History}      options={{
+          headerShown: false,
           tabBarLabel: 'History',
           tabBarColor: '#E3AC1E',
           tabBarIcon: ({  }) => (
@@ -36,6 +38,7 @@ const TabScreen = () => {
         }}/>
 
 <Tab.Screen name ={"Booking"} component={Booking}      options={{
+          headerShown: false,
           tabBarLabel: 'Booking',
           tabBarColor: '#E3AC1E',
           tabBarIcon: ({ }) => (
@@ -43,6 +46,7 @@ const TabScreen = () => {
           ),
 }}/>
         <Tab.Screen name ={"Profile"} component={Profile}      options={{
+          headerShown: false,
           tabBarLabel: 'Profile',
           tabBarColor: '#E3AC1E',
           tabBarIcon: ({}) => (

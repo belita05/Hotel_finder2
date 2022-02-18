@@ -172,7 +172,7 @@ const Home = ({navigation}) => {
             Find your hotel
           </Text>
           <View style={{flexDirection: 'row'}}>
-            <Text style={{fontSize: 30, fontWeight: 'bold'}}>in</Text>
+            <Text style={{fontSize: 30, fontWeight: 'bold'}}>in </Text>
             <Text
               style={{fontSize: 30, fontWeight: 'bold', color: '#E3AC1E'}}>
               SA
@@ -257,7 +257,7 @@ const style = StyleSheet.create({
   },
   textInputStyle: {
     height: 40,
-    width: 300,
+    width: 410,
     borderWidth: 1,
     paddingLeft: 20,
     margin: 5,
@@ -270,10 +270,10 @@ const style = StyleSheet.create({
  
   searchInputContainer: {
     height: 60,
-    width: 400,
+    width: 600,
     backgroundColor: COLORS.light,
     marginTop: 10,
-    marginLeft: 20,
+    marginLeft: 40,
     borderRadius: 5,
     flexDirection: 'row',
     alignItems: 'center',
