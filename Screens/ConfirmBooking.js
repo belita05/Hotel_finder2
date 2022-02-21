@@ -19,6 +19,9 @@ const navigation = useNavigation();
                    <View style={style.btn}>
         <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
        <Button onPress={()=> navigation.navigate("Payment")} title='Book' color={'#E3AC1E'} ></Button>
+
+       
+
        </View>
         </View> 
        

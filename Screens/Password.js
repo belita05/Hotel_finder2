@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native'
 import { Image, ImageBackground, StyleSheet, Button, Text, View, TextInput, Alert } from 'react-native';
 // import { SafeAreaView } from 'react-native-safe-area-context';
@@ -13,13 +13,14 @@ const staticLogo = require("./../assets/images/test.png");
 const sub = require("./../assets/images/sub.png");
 
 const Password = () => {
+const [email, setEmail] = useState()
 const navigation = useNavigation();
     
 
 
         const resetPassword = () => {
         auth.sendPasswordResetEmail(email).then(res => {
-            alert(`A link has been to ${email}, please check your email`)
+            alert(`A link has been sent to ${email}, please check your email`)
         }).catch(err => {
             alert(error.message)
         })
@@ -56,7 +57,7 @@ const navigation = useNavigation();
                     <View style={{ color: '#fff', justifyContent: 'center', alignItems: "center", marginBottom: 5, marginTop: 20 }}>
                         <Text style={{ color: '#fff' }}>Enter Your Email Address </Text>
                     </View>
-                    <TextInput value={email} placeholder="email" onChangeText={(text) => resetPassword (text)} style={styles.Input} />
+                    <TextInput value={email} placeholder="email" onChangeText={(text) => setEmail(text)} style={styles.Input} />
 
 
                 </View>

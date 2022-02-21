@@ -12,22 +12,22 @@ const Profile = () => {
     return(
         <>
         <View style ={styles.container}>     
-      <Avatar size={90} source={require('../assets/images/profile.png')}></Avatar>
+      <Avatar size={150} source={require('../assets/images/profile.png')}></Avatar>
         <View style={styles.row}>
-          <Icons name="person" color="#000000" size={20}/>
+          <Icons name="person" color="#000000" size={25}/>
           <Text style={{color:"#777777", marginLeft: 20, fontSize: 17}}>Bella Tau</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="phone" color="#000000" size={20} />
+          <Icon name="phone" color="#000000" size={25} />
           
           <Text style={{color:"#777777", marginLeft: 20 , fontSize: 17}}>078 222 4375</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="email" color="#000000" size={20}/>
+          <Icon name="email" color="#000000" size={25}/>
           <Text style={{color:"#777777", marginLeft: 20, fontSize: 17}}>bellam@gmail.com</Text>
         </View>
 
-           <View  style={styles.ButtonCover} > 
+           <View  style={styles.ButtonCover}> 
       
        <View  style={styles.button} > 
     
@@ -42,10 +42,7 @@ const Profile = () => {
         </Button>
          </View> 
          </View> 
-         {/* </View> */}
-        
-        </View>
-        
+         </View>
         </>
     )
 }
@@ -54,11 +51,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         justifyContent: 'center',
+
     },
-    icon:{
-        flexDirection:'row',
-        justifyContent:"space-between" ,
-    },
+
     ButtonCover : {
       flex:1,
       marginRight:60,
@@ -105,6 +100,7 @@ const styles = StyleSheet.create({
       row: {
         flexDirection: 'row',
         marginBottom: 10,
+        justifyContent: 'center',
       },
 
         menuWrapper: {
