@@ -26,7 +26,7 @@ const Payment = ({navigation}) => {
 
                         ></Avatar>
                     </View>
-                    <Text> Card Number</Text>
+                    <Text>Card Number</Text>
                     <View style={styles.action}>
                    
           <TextInput
@@ -42,7 +42,7 @@ const Payment = ({navigation}) => {
             ]}
           />
           </View>
-<Text>Card Holder Name </Text>
+        <Text>Card Holder Name </Text>
           <View style={styles.action}>
    
           <TextInput

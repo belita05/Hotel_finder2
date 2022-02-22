@@ -20,7 +20,7 @@ const navigation = useNavigation();
 
         const resetPassword = () => {
         auth.sendPasswordResetEmail(email).then(res => {
-            alert(`A link has been sent to ${email}, please check your email`)
+            alert(`A link has been sent to ${email}, for password reset, please check your email`)
         }).catch(err => {
             alert(error.message)
         })

@@ -35,10 +35,7 @@ const StackNavigation = () => {
         <Stack.Screen name= "PropertyView" component={PropertyView}/>
         <Stack.Screen name= "Rooms" component={Rooms}/>
         <Stack.Screen name= "ConfirmBooking" component={ConfirmBooking}/>
-
-
- 
-      </Stack.Navigator>
+        </Stack.Navigator>
     )
 }
 
