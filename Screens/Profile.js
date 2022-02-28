@@ -11,8 +11,9 @@ const Profile = () => {
     const navigation = useNavigation();
     return(
         <>
-        <View style ={styles.container}>     
-      <Avatar size={150} source={require('../assets/images/profile.png')}></Avatar>
+        <View style ={styles.picture}>     
+      <Avatar size={200} source={require('../assets/images/profile.png')}></Avatar>
+      </View>
         <View style={styles.row}>
           <Icons name="person" color="#000000" size={25}/>
           <Text style={{color:"#777777", marginLeft: 20, fontSize: 17}}>Bella Tau</Text>
@@ -42,7 +43,7 @@ const Profile = () => {
         </Button>
          </View> 
          </View> 
-         </View>
+         
         </>
     )
 }
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
       flex:1,
       marginRight:60,
       marginLeft:60,
-      marginTop:400,
+      marginTop: 250,
      justifyContent: 'center'
     },
 
@@ -66,22 +67,22 @@ const styles = StyleSheet.create({
      margin:5,
      justifyContent: 'center',
      
+     
     },
     content:
     {
         margin:15,
     },
+    picture: {
+    alignItems: 'center',
+    marginBottom: 100,
+    marginTop: 30
+    },
     box:{
-
         flex:1,
         backgroundColor:'#fff'
     },
-    img:{
-        width:"70%",
-        borderRadius:10,
-        height:'50%',
-        backgroundColor:'#00BFFF'
-    },
+    
     head:
     {
         marginTop:40,
@@ -101,6 +102,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginBottom: 10,
         justifyContent: 'center',
+        
       },
 
         menuWrapper: {

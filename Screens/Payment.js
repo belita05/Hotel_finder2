@@ -133,8 +133,7 @@ const styles = StyleSheet.create({
         width:'100%',
         paddingLeft: 20,
         margin: 5,
-        borderColor: '#000000',
-        backgroundColor: '#FFFFFF',
+      
       },
     commandButton: {
       padding: 10,
