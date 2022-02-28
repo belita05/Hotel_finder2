@@ -7,8 +7,8 @@ import COLORS from './colors';
 
 const DetailsScreen = ({navigation, route}) => {
   const item = route.params;
-  const [date, setDate] = useState('09-10-2020');
-
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   return (
     <ScrollView
@@ -84,7 +84,7 @@ const DetailsScreen = ({navigation, route}) => {
         
         <DatePicker
         style={style.calender}
-        date={date}
+        date={startDate}
         mode="date"
         // placeholder="check in"
         format="YYYY-MM-DD"
@@ -108,13 +108,13 @@ const DetailsScreen = ({navigation, route}) => {
           }
           // ... You can check the source to find the other keys.
         }}
-        onDateChange={(date) => {setDate(date)}}
+        onDateChange={(startDate) => {setStartDate(startDate)}}
       />
       
 
 <DatePicker
         style={{width: 165}}
-        date={date}
+        date={endDate}
         mode="date"
         // placeholder="select date"
         format="YYYY-MM-DD"
@@ -137,7 +137,7 @@ const DetailsScreen = ({navigation, route}) => {
           }
           // ... You can check the source to find the other keys.
         }}
-        onDateChange={(date) =>  {setDate(date)}}
+        onDateChange={(endDate) =>  {setEndDate(endDate)}}
       />
       </View>
         <View style={style.btn}>
