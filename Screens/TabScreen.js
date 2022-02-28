@@ -5,15 +5,10 @@ import IconM from 'react-native-vector-icons/MaterialIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './Home';
 import Profile from './Profile';
-import History from './History';
+// import History from './History';
 import Booking from './Booking';
 
-
-
-
 const Tab = createBottomTabNavigator();
-
-
 
 const TabScreen = () => {
     return (
@@ -28,14 +23,14 @@ const TabScreen = () => {
           <Icon name="home" color={'#000000'} size={24} />
           ),
         }} />
-<Tab.Screen name ={"History"} component={History}      options={{
+{/* <Tab.Screen name ={"History"} component={History}      options={{
           headerShown: false,
           tabBarLabel: 'History',
           tabBarColor: '#E3AC1E',
           tabBarIcon: ({  }) => (
           <Icons name="history" color={'#000000'} size={24} />
           ),
-        }}/>
+        }}/> */}
 
 <Tab.Screen name ={"Booking"} component={Booking}      options={{
           headerShown: false,

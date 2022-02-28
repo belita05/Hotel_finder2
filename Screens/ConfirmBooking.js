@@ -13,19 +13,27 @@ const navigation = useNavigation();
     return (
         <>
         <Image style={style.bed4} source={require("./../assets/images/bed4.jpg")} >
-                </Image>
-            <SafeAreaView style={style.container}>
-            
-                   <View style={style.btn}>
+        </Image>
+        <View style={style.details}>
+        <Text style={{fontSize: 17, marginTop: 10}}>Name: Bella Tau</Text>
+        <Text style={{fontSize: 17, marginTop: 5}}>Hotel name: Mumbai Hotel</Text>
+        <Text style={{fontSize: 17, marginTop: 5}}>Check in: 28/02/2022</Text>
+        <Text style={{fontSize: 17, marginTop: 5}}>Check out: 01/02/2022</Text>
+        <Text style={{fontSize: 17, marginTop: 5}}>Number of guests: 2 Adults</Text>
+        </View>
+        
+
+              
+        <SafeAreaView style={style.container}> 
+
+        {/* <Text>jhjhjj</Text> */}
+
+        <View style={style.btn}>
         <View style={{flex:1,marginBottom:20,justifyContent: 'flex-end',width:300,height:50 }}>
        <Button onPress={()=> navigation.navigate("Payment")} title='Book' color={'#E3AC1E'} ></Button>
-
-       
-
        </View>
-        </View> 
-       
-            </SafeAreaView>
+       </View> 
+       </SafeAreaView>
         </>
     )
 }
@@ -44,5 +52,14 @@ const style = StyleSheet.create({
     overflow: 'hidden',
     width: 450
   },
+
+  details:{
+      borderBottomRightRadius: 20,
+      borderBottomLeftRadius: 20,
+      backgroundColor: '#E3AC1E', 
+      marginLeft: 10,
+
+      
+  }
 });
 export default ConfirmBooking;

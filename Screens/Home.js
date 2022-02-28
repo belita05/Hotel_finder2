@@ -181,7 +181,7 @@ const Home = ({navigation}) => {
         </View>
         <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
                         <Icon name='notifications' size={22} color='#000000' style={{ marginTop: 20, marginRight: 10 }}></Icon>
-                    </TouchableOpacity>
+        </TouchableOpacity>
         {/* <Icon name="notifications" size={38} color= {COLORS.grey} /> */}
       </View>
      

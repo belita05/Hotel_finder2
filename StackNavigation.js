@@ -14,6 +14,7 @@ import UpdateProfile from './Screens/UpdateProfile';
 import PropertyView from './Screens/PropertyView';
 import Rooms from './Screens/Rooms';
 import ConfirmBooking from './Screens/ConfirmBooking';
+import Notification from './Screens/Notification';
 
 
 
@@ -35,6 +36,7 @@ const StackNavigation = () => {
         <Stack.Screen name= "PropertyView" component={PropertyView}/>
         <Stack.Screen name= "Rooms" component={Rooms}/>
         <Stack.Screen name= "ConfirmBooking" component={ConfirmBooking}/>
+        <Stack.Screen name= "Notification" component={Notification}/>
         </Stack.Navigator>
     )
 }
