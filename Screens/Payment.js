@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SafeAreaView, Text, View, StyleSheet,TextInput,TouchableOpacity  } from 'react-native';
-import { Avatar } from 'react-native-elements';
+import { Avatar, ThemeConsumer } from 'react-native-elements';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import style from 'react-native-datepicker/style';
+import { Searchbar } from 'react-native-paper';
 // import Feather from 'react-native-vector-icons/Feather';
 
 const Payment = ({navigation}) => {
+
+  const [userInfo,setHotel] = useState([]);
+
+  useEffect(() => {
+    Searchbar()
+    db.collection("Hotel")
+    get()
+    then ((res) => {
+      let.userInfo = [];
+      res.forEach((action) => {
+        userInfo.push({...action.data(), id: action.id});
+      });
+      setHotel(userInfo);
+    });
+  }, []);
     return (
         <>
             <SafeAreaView style={styles.container}>
@@ -58,9 +75,9 @@ const Payment = ({navigation}) => {
             ]}
           />
           </View>
-          
+          <View style={style.input}>
+          <Text>Expiry Date </Text>
           <View style={styles.action}>
-              <Text>Expiry Date </Text>
           <TextInput
         
             placeholderTextColor="#000000"
@@ -74,8 +91,9 @@ const Payment = ({navigation}) => {
             ]}
           />
           </View>
-          <View style={styles.action}>
-              <Text>CVV </Text>
+          <Text>CVV </Text>
+          <View style={styles.action }>
+              
           <TextInput
         
             placeholderTextColor="#000000"
@@ -88,6 +106,7 @@ const Payment = ({navigation}) => {
               },
             ]}
           />
+          </View>
           </View>
 
           {/* <TouchableOpacity style={styles.commandButton} onPress={() => navigation.navigate('PaymentSuc')}>
@@ -126,6 +145,11 @@ const styles = StyleSheet.create({
         borderBottomColor: '#f2f2f2',
         borderRadius:10,
         paddingBottom: 5,
+      },
+
+      input: {
+        flexDirection: 'column-reverse'
+
       },
       textInputStyle: {
         height: 35,

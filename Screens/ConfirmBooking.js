@@ -56,7 +56,7 @@ const style = StyleSheet.create({
   details:{
       borderBottomRightRadius: 20,
       borderBottomLeftRadius: 20,
-      backgroundColor: '#E3AC1E', 
+      backgroundColor: '#ffffff', 
       marginLeft: 10,
 
       

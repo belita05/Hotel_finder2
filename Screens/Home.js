@@ -94,21 +94,21 @@ const Home = ({navigation}) => {
               </View>
             
             </View>
-            <View
+            {/* <View
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 marginTop: 10,
-              }}>
-              <View style={{flexDirection: 'row'}}>
+              }}> */}
+              {/* <View style={{flexDirection: 'row'}}>
                 <Icon name="star" size={15} color={COLORS.orange} />
                 <Icon name="star" size={15} color={COLORS.orange} />
                 <Icon name="star" size={15} color={COLORS.orange} />
                 <Icon name="star" size={15} color={COLORS.orange} />
                 <Icon name="star" size={15} color={COLORS.grey} />
               </View>
-              <Text style={{fontSize: 10, color: COLORS.grey}}>365 reviews</Text>
-            </View>
+              <Text style={{fontSize: 10, color: COLORS.grey}}>365 reviews</Text> */}
+            {/* </View> */}
           </View>
         </Animated.View>
       </TouchableOpacity>
@@ -125,10 +125,10 @@ const Home = ({navigation}) => {
             zIndex: 1,
             flexDirection: 'row',
           }}>
-          <Icon name="star" size={15} color={COLORS.orange} />
+          {/* <Icon name="star" size={15} color={COLORS.orange} />
           <Text style={{color: COLORS.white, fontWeight: 'bold', fontSize: 15}}>
             5.0
-          </Text>
+          </Text> */}
         </View>
         <Image style={style.topHotelCardImage} source={hotel.image} />
         <View style={{paddingVertical: 5, paddingHorizontal: 10}}>
