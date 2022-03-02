@@ -6,24 +6,11 @@ import Feather from 'react-native-vector-icons/Feather';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import style from 'react-native-datepicker/style';
 import { Searchbar } from 'react-native-paper';
-// import Feather from 'react-native-vector-icons/Feather';
+
 
 const Payment = ({navigation}) => {
 
-  const [userInfo,setHotel] = useState([]);
-
-  useEffect(() => {
-    Searchbar()
-    db.collection("Hotel")
-    get()
-    then ((res) => {
-      let.userInfo = [];
-      res.forEach((action) => {
-        userInfo.push({...action.data(), id: action.id});
-      });
-      setHotel(userInfo);
-    });
-  }, []);
+  
     return (
         <>
             <SafeAreaView style={styles.container}>
@@ -128,12 +115,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        // alignItems: 'center',
         justifyContent: 'center',
     },
     textInput: {
         flex: 1,
-      //   marginTop: Platform.OS === 'ios' ? 0 : -12,
         paddingLeft: 10,
         color: '#000000',
       },
@@ -168,9 +153,7 @@ const styles = StyleSheet.create({
       width: 300,
       alignItems:'center'
       
-      
-      
-    },
+      },
     panelButton: {
       padding: 13,
       borderRadius: 10,
