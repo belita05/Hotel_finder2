@@ -1,10 +1,10 @@
-// import React from 'react';
-import React, {useState} from 'react';
+
+import React, {useState, useEffect} from 'react';
 import { Dimensions, FlatList, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image, Animated, ColorPropType,} from 'react-native';
 import { Icon } from 'react-native-elements';
 import {COLORS} from './colors';
 import { hotels } from './Hotels';
-import { db } from "firebase";
+import { db } from './Firebase/firebase';
 
 
 const {width} = Dimensions.get('screen');
@@ -109,11 +109,30 @@ const Home = ({navigation}) => {
       </View>
     );
   };
+
+  const [userinfo, setHotel] = useState([]);
+
+
+  useEffect(() => {
+    // search()
+    db.collection("Hotel").get()
+    .then((res) => {
+      let userinfo = [];
+      res.forEach((action) => {
+        userinfo.push({...action.data(), id: action.id});
+      });
+      setHotel(userinfo);
+    })
+  }, []);
+
   const [search, setSearch] = useState('');
   const [filteredDataSource, setFilteredDataSource] = useState([]);
   const [queries, setquery] = useState();
-  const loc = db.collection("Hotel");
+  const [masterDataSource] = useState([]);
 
+  //search
+  
+  const loc = db.collection("Hotel");
   const searchFilterFunction = (text) => {
       
     if (text) {
@@ -183,18 +202,19 @@ const Home = ({navigation}) => {
      
       <ScrollView showsVerticalScrollIndicator={false}>
        
-        <Icon name= "search" size= {28}/>  
+        {/* <Icon name= "Search here" size= {28} />   */}
         <TextInput
-            // style={style.textInputStyle}
-            // onChangeText={(text) => searchFilterFunction(text)}
-            // value={search}
-            // underlineColorAndroid="transparent"
-            // placeholder="Search Here"
-            placeholder= "Search place"
-            style={{color: COLORS.black}}
-            onBlur={() => search()}
-            onChangeText= {(text) => setquery(text)}
-            value= {queries}
+            style={style.textInputStyle}
+            onChangeText={(text) => searchFilterFunction(text)}
+            value={search}
+            underlineColorAndroid="transparent"
+            placeholder="Search Here"
+
+            // placeholder= "Search place"
+            // style={{color: COLORS.black}}
+            // onBlur={() => search()}
+            // onChangeText= {(text) => setquery(text)}
+            // value= {queries}
           />
           
         <CategoryList />
