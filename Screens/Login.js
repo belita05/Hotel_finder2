@@ -59,9 +59,8 @@ const Login = () => {
                         <Text style= {{color: '#fff', justifyContent: "center", alignItems: "center", marginBottom: 5}}>
                         Forgot Password? Click Here
                         </Text>
-                        {/* passwordReset: email => {
-  return firebase.auth().sendPasswordResetEmail(email)
-}, */}
+                    
+
                     </TouchableOpacity>
                         
                            
