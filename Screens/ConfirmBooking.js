@@ -14,14 +14,14 @@ const navigation = useNavigation();
         <>
         <Image style={style.bed4} source={require("./../assets/images/bed4.jpg")} >
         </Image>
-        <View style={style.details}>
+        {/* <View style={style.details}>
         <Text style={{fontSize: 17, marginTop: 10}}>Name: Bella Tau</Text>
         <Text style={{fontSize: 17, marginTop: 5}}>Hotel name: Mumbai Hotel</Text>
         <Text style={{fontSize: 17, marginTop: 5}}>Check in: 28/02/2022</Text>
         <Text style={{fontSize: 17, marginTop: 5}}>Check out: 01/02/2022</Text>
         <Text style={{fontSize: 17, marginTop: 5}}>Number of guests: 2 Adults</Text>
         </View>
-        
+         */}
 
               
         <SafeAreaView style={style.container}> 
