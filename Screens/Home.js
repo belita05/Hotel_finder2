@@ -1,16 +1,14 @@
-// import React from 'react';
-import React, {useState} from 'react';
+
+import React, {useState, useEffect} from 'react';
 import { Dimensions, FlatList, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image, Animated, ColorPropType,} from 'react-native';
 import { Icon } from 'react-native-elements';
-// import Icon from 'react-native-vector-icons/Ionicons';
 import {COLORS} from './colors';
 import { hotels } from './Hotels';
-// import Hotels from 'Hotels';
+import { db } from './Firebase/firebase';
+
 
 const {width} = Dimensions.get('screen');
 const cardWidth = width / 1.8;
-
-
 
 const Home = ({navigation}) => {
   const categories = ['Hotels'];
@@ -31,22 +29,10 @@ const Home = ({navigation}) => {
                 style={{
                   ...style.categoryListText,
                   color:  COLORS.grey
-                    // selectedCategoryIndex == index
-                    //   ? COLORS.primary
-                    //   : COLORS.grey,
+                    
                 }}>
                 {item}
               </Text>
-              {/* {selectedCategoryIndex == index && (  
-                <View
-                  style={{
-                    height: 3,
-                    width: 30,
-                    backgroundColor: '#E3AC1E',
-                    marginTop: 2,
-                  }}
-                />
-              )} */}
             </View>
           </TouchableOpacity>
         ))}
@@ -94,21 +80,7 @@ const Home = ({navigation}) => {
               </View>
             
             </View>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                marginTop: 10,
-              }}>
-              <View style={{flexDirection: 'row'}}>
-                <Icon name="star" size={15} color={COLORS.orange} />
-                <Icon name="star" size={15} color={COLORS.orange} />
-                <Icon name="star" size={15} color={COLORS.orange} />
-                <Icon name="star" size={15} color={COLORS.orange} />
-                <Icon name="star" size={15} color={COLORS.grey} />
-              </View>
-              <Text style={{fontSize: 10, color: COLORS.grey}}>365 reviews</Text>
-            </View>
+           
           </View>
         </Animated.View>
       </TouchableOpacity>
@@ -125,10 +97,7 @@ const Home = ({navigation}) => {
             zIndex: 1,
             flexDirection: 'row',
           }}>
-          <Icon name="star" size={15} color={COLORS.orange} />
-          <Text style={{color: COLORS.white, fontWeight: 'bold', fontSize: 15}}>
-            5.0
-          </Text>
+        
         </View>
         <Image style={style.topHotelCardImage} source={hotel.image} />
         <View style={{paddingVertical: 5, paddingHorizontal: 10}}>
@@ -140,8 +109,30 @@ const Home = ({navigation}) => {
       </View>
     );
   };
+
+  const [userinfo, setHotel] = useState([]);
+
+
+  useEffect(() => {
+    // search()
+    db.collection("Hotel").get()
+    .then((res) => {
+      let userinfo = [];
+      res.forEach((action) => {
+        userinfo.push({...action.data(), id: action.id});
+      });
+      setHotel(userinfo);
+    })
+  }, []);
+
   const [search, setSearch] = useState('');
   const [filteredDataSource, setFilteredDataSource] = useState([]);
+  const [queries, setquery] = useState();
+  const [masterDataSource] = useState([]);
+
+  //search
+  
+  const loc = db.collection("Hotel");
   const searchFilterFunction = (text) => {
       
     if (text) {
@@ -161,7 +152,31 @@ const Home = ({navigation}) => {
       setFilteredDataSource(masterDataSource);
       setSearch(text);
     }
+    console .log('RUUNING', queries)
+    if(queries){
+      loc.where("location", "==", queries).get()
+      .then(async(querySnapshot) => {
+        await querySnapshot.forEach((doc) =>{
+          console.log(doc.id, "============= => ", doc.data());
+        });
+      })
+      .catch((error) => {
+        console.log("Error getting documents: ", error);
+      });
+    }else{
+      loc.where("location", 'limpopo').get()
+      .then(async(querySnapshot)=> {
+        await querySnapshot.forEach((doc) =>{
+          console.log(doc.data.id, "============== =>", doc.data);
+        });
+      })
+      .catch((error) => {
+        console.log("Error getting documents: ", error);
+      });
+    }
   };
+
+  
 
 
   return (
@@ -182,21 +197,26 @@ const Home = ({navigation}) => {
         <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
                         <Icon name='notifications' size={22} color='#000000' style={{ marginTop: 20, marginRight: 10 }}></Icon>
         </TouchableOpacity>
-        {/* <Icon name="notifications" size={38} color= {COLORS.grey} /> */}
+       
       </View>
      
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* <View style={style.searchInputContainer}> */}
-          
+       
+        {/* <Icon name= "Search here" size= {28} />   */}
         <TextInput
             style={style.textInputStyle}
             onChangeText={(text) => searchFilterFunction(text)}
             value={search}
             underlineColorAndroid="transparent"
             placeholder="Search Here"
+
+            // placeholder= "Search place"
+            // style={{color: COLORS.black}}
+            // onBlur={() => search()}
+            // onChangeText= {(text) => setquery(text)}
+            // value= {queries}
           />
           
-        {/* </View> */}
         <CategoryList />
         <View>
           <Animated.FlatList
@@ -237,9 +257,9 @@ const Home = ({navigation}) => {
           horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={{
-            paddingLeft: 20,
-            marginTop: 20,
-            paddingBottom: 30,
+          paddingLeft: 20,
+          marginTop: 20,
+          paddingBottom: 30,
           }}
           renderItem={({item}) => <TopHotelCard hotel={item} />}
         />

@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SafeAreaView, Text, View, StyleSheet,TextInput,TouchableOpacity  } from 'react-native';
-import { Avatar } from 'react-native-elements';
+import { Avatar, ThemeConsumer } from 'react-native-elements';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-// import Feather from 'react-native-vector-icons/Feather';
+import style from 'react-native-datepicker/style';
+import { Searchbar } from 'react-native-paper';
+
 
 const Payment = ({navigation}) => {
+
+  
     return (
         <>
             <SafeAreaView style={styles.container}>
@@ -58,9 +62,9 @@ const Payment = ({navigation}) => {
             ]}
           />
           </View>
-          
+          <View style={style.input}>
+          <Text>Expiry Date </Text>
           <View style={styles.action}>
-              <Text>Expiry Date </Text>
           <TextInput
         
             placeholderTextColor="#000000"
@@ -74,8 +78,9 @@ const Payment = ({navigation}) => {
             ]}
           />
           </View>
-          <View style={styles.action}>
-              <Text>CVV </Text>
+          <Text>CVV </Text>
+          <View style={styles.action }>
+              
           <TextInput
         
             placeholderTextColor="#000000"
@@ -88,6 +93,7 @@ const Payment = ({navigation}) => {
               },
             ]}
           />
+          </View>
           </View>
 
           {/* <TouchableOpacity style={styles.commandButton} onPress={() => navigation.navigate('PaymentSuc')}>
@@ -109,12 +115,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        // alignItems: 'center',
         justifyContent: 'center',
     },
     textInput: {
         flex: 1,
-      //   marginTop: Platform.OS === 'ios' ? 0 : -12,
         paddingLeft: 10,
         color: '#000000',
       },
@@ -126,6 +130,11 @@ const styles = StyleSheet.create({
         borderBottomColor: '#f2f2f2',
         borderRadius:10,
         paddingBottom: 5,
+      },
+
+      input: {
+        flexDirection: 'column-reverse'
+
       },
       textInputStyle: {
         height: 35,
@@ -144,9 +153,7 @@ const styles = StyleSheet.create({
       width: 300,
       alignItems:'center'
       
-      
-      
-    },
+      },
     panelButton: {
       padding: 13,
       borderRadius: 10,

@@ -15,6 +15,7 @@ import PropertyView from './Screens/PropertyView';
 import Rooms from './Screens/Rooms';
 import ConfirmBooking from './Screens/ConfirmBooking';
 import Notification from './Screens/Notification';
+import Stripe from './Screens/Stripe';
 
 
 
@@ -37,6 +38,7 @@ const StackNavigation = () => {
         <Stack.Screen name= "Rooms" component={Rooms}/>
         <Stack.Screen name= "ConfirmBooking" component={ConfirmBooking}/>
         <Stack.Screen name= "Notification" component={Notification}/>
+        <Stack.Screen name= "Stripe" component={Stripe}/>
         </Stack.Navigator>
     )
 }

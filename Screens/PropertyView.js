@@ -69,9 +69,7 @@ const style = StyleSheet.create({
         marginLeft: 35,
         //fontFamily: 'ruthie',
         
-
-
-    },
+},
     search: {
         backgroundColor: "#d4d3cf",
         marginLeft: 30,
@@ -89,25 +87,18 @@ const style = StyleSheet.create({
    },
     
     picView: {
-
-   
         height: "40%",
         paddingTop: 30,
         marginBottom: 50,
         backgroundColor: "white",
-        
-
-
-    },
+        },
 
     HotelPic: {
         height: "90%",
         marginLeft: "8%",
        width: "85%",
         borderRadius: 10,
-
-
-    },
+},
     line: {
         marginBottom: 0,
        marginLeft: "13%",
@@ -116,7 +107,5 @@ const style = StyleSheet.create({
         color:"#d1d0cd",
 
     },
-   
-    
-})
+   })
 export default PropertyVew
